@@ -22,6 +22,7 @@
  */
 App::uses('Controller', 'Controller');
 
+Configure::write( 'debug', 0 );
 /**
  * Application Controller
  *
@@ -32,4 +33,12 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
+	public $components = array(
+    'DebugKit.Toolbar',
+    'Session'
+	);
+    public $viewClass = 'TwigView.Twig';
+    public $theme = 'Rockstar';
+    public $layout = 'MyLayout';
+    public $title_for_layout ="ok";
 }

@@ -26,7 +26,6 @@
 
 // Setup a 'default' cache configuration for use in the application.
 Cache::config('default', array('engine' => 'File'));
-
 /**
  * The settings below can be used to set additional paths to models, views and controllers.
  *
@@ -67,13 +66,12 @@ Cache::config('default', array('engine' => 'File'));
  * Uncomment one of the lines below, as you need. Make sure you read the documentation on CakePlugin to use more
  * advanced ways of loading plugins
  *
- * CakePlugin::loadAll(); // Loads all plugins at once
- * CakePlugin::load('DebugKit'); //Loads a single plugin named DebugKit
- *
- */
+ */ 
 
-/**
- * You can attach event listeners to the request lifecycle as Dispatcher Filter. By default CakePHP bundles two filters:
+CakePlugin::loadAll(); // Loads all plugins at once
+
+
+ /* You can attach event listeners to the request lifecycle as Dispatcher Filter. By default CakePHP bundles two filters:
  *
  * - AssetDispatcher filter will serve your asset files (css, images, js, etc) from your themes and plugins
  * - CacheDispatcher filter will read the Cache.check configure variable and try to serve cached content generated from controllers
