@@ -9,8 +9,10 @@
 	<!-- Javascript Files -->
 
 	<!-- CSS Files -->
-	<link rel="stylesheet" type="text/css" href="/BYOMusic/css/navbar.css">
-	<link rel="stylesheet" type="text/css" href="/BYOMusic/css/global.css">
+	<?php 
+		echo $this->Html->css("navbar.css");
+		echo $this->Html->css("global.css");
+	?>
 </head>
 
 <!-- Let the bodies hit the floor @Drowing Pool-->

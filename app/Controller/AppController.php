@@ -37,12 +37,23 @@ class AppController extends Controller {
     'DebugKit.Toolbar',
     'Session',
     'Auth' => array(
-            'loginRedirect' => array('controller' => 'posts', 'action' => 'index'),
-            'logoutRedirect' => array('controller' => 'pages', 'action' => 'display', 'home')
+            //'loginRedirect' => array('controller' => 'posts', 'action' => 'index'),
+            'logoutRedirect' => array('controller' => 'Home', 'action' => 'index', 'home'),
+            'authorize' => array('Controller')
         )
 	);
     public $layout = 'MyLayout';
     public function beforeFilter() {
         $this->Auth->allow('index', 'add');
+    }
+
+    public function isAuthorized($user) {
+        // Admin peut accéder à toute action
+        if (isset($user['role']) && $user['role'] === 'admin') {
+            return true;
+        }
+
+        // Refus par défaut
+        return false;
     }
 }
