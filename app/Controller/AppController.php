@@ -22,7 +22,7 @@
  */
 App::uses('Controller', 'Controller');
 
-Configure::write( 'debug', 0 );
+//Configure::write( 'debug', 0 );
 /**
  * Application Controller
  *
@@ -35,10 +35,14 @@ Configure::write( 'debug', 0 );
 class AppController extends Controller {
 	public $components = array(
     'DebugKit.Toolbar',
-    'Session'
+    'Session',
+    'Auth' => array(
+            'loginRedirect' => array('controller' => 'posts', 'action' => 'index'),
+            'logoutRedirect' => array('controller' => 'pages', 'action' => 'display', 'home')
+        )
 	);
-    public $viewClass = 'TwigView.Twig';
-    public $theme = 'Rockstar';
     public $layout = 'MyLayout';
-    public $title_for_layout ="ok";
+    public function beforeFilter() {
+        $this->Auth->allow('index', 'add');
+    }
 }

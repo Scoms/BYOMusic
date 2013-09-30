@@ -17,9 +17,15 @@
 <body>
 	<!-- Navigation Bar-->
 	<ul class="navbar">
-		<li>BYOMusic</li>
-		<li class="accountButtons">Sign In</li>
-		<li class="accountButtons">Register</li>
+		<li>
+			<?php echo $this->Html->link('BYOMusic',array('controller' => 'Home', 'action' => 'index')); ?>
+		</li>
+		<li class="accountButtons">
+			<?php echo $this->Html->link('Sign In',array('controller' => 'users', 'action' => 'login')); ?>
+        </li>
+		<li class="accountButtons">
+			<?php echo $this->Html->link('Register',array('controller' => 'users', 'action' => 'add')); ?>
+		</li>
 	</ul>
 	
 	<!-- Content -->

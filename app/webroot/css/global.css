@@ -1,3 +1,60 @@
+/*
+* Main Layout
+*/
+*{
+	margin:0;
+	padding: 0;
+}
+
 body{
-	background-color:lavender;
+	background-color:white;
+	font-family: "Avantgarde", sans-serif;
+
+}
+
+div.content{
+	margin:2%;
+	margin-top:5em;
+}
+
+/*
+* Titles and test 
+*/
+
+h1{
+	font-weight: normal;
+	margin-bottom: 1em;
+}
+
+a{
+	text-decoration: none;
+	color:lavender;
+}
+
+a:hover{
+	color:white;
+}
+
+/*
+* Tables
+*/
+table{
+	font-size: 0.5em;
+    border-collapse:collapse;
+}
+
+tr:hover{
+	background-color: lavender;
+}
+
+th{
+	background-color: lightgrey;
+}
+
+th, td {
+	font-weight: normal;
+	text-align: left;
+	padding: 1em;
+	padding-top: .5em;
+	padding-bottom: .5em;
 }

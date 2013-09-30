@@ -1,17 +1,15 @@
-*{
-	margin:0;
-	padding: 0;
-}
-
-
 ul.navbar{
 	/*Color*/
-	background-color:lightgrey; 
-
+	background-color:#262626; 
+	
 	/*Size*/
 	height: 3em;
 	width:100%;
 
+	/*Position*/
+	position:top;
+	position:fixed;
+	top:0px;
 }
 
 ul.navbar li{	
@@ -22,8 +20,8 @@ ul.navbar li{
 	display: inline-block;
 
 	/*Text*/
-	color:black;
-	font-family:"Avantgarde" sans-serif;
+	color:lavender;
+	font-family:"Avantgarde",sans-serif;
 }
 
 ul.navbar li.accountButtons{
@@ -35,5 +33,6 @@ ul.navbar li.accountButtons{
 * Action Design
 */
 ul.navbar li:hover{
-	color:darkblue;
+	color:white;
+	cursor: pointer;
 }
