@@ -1,0 +1,50 @@
+/*
+ * Global set
+ */
+fieldset{
+	background-color: lavender;
+	border:none;
+}
+
+fieldset legend{
+	/*Style*/
+	background-color: lightgrey;
+	font-size: 1.3em;
+
+	/*Position*/
+	margin-left:2%;
+	padding:.3em; 
+}
+
+fieldset div.input{
+	padding: .5em;
+}
+
+fieldset div.input input, fieldset div.input select{
+	float:right;
+}
+
+fieldset input[type="submit"]{
+	/*Style*/
+	box-shadow: none;
+
+
+	/*Postion*/
+	margin-left: 1em;
+	margin-bottom: 1em;
+}
+
+/*
+ * Sign In 
+ */
+ 
+ fieldset#signIn{
+ 	width:25%;
+ }
+
+ /*
+  * Log In 
+  */
+  fieldset#logIn{
+  	width:25%;
+  }

@@ -7,12 +7,15 @@
 		BYOMusic <?php echo $title_for_layout; ?>
 	</title>
 	<!-- Javascript Files -->
-
+	
 	<!-- CSS Files -->
 	<?php 
-		echo $this->Html->css("navbar.css");
-		echo $this->Html->css("global.css");
+		echo $this->Html->css("navbar");
+		echo $this->Html->css("global");
+		echo $this->Html->css("forms");
 	?>
+
+	<!-- Auto Imports -->
 </head>
 
 <!-- Let the bodies hit the floor @Drowing Pool-->
@@ -23,10 +26,10 @@
 			<?php echo $this->Html->link('BYOMusic',array('controller' => 'Home', 'action' => 'index')); ?>
 		</li>
 		<li class="accountButtons">
-			<?php echo $this->Html->link('Sign In',array('controller' => 'users', 'action' => 'login')); ?>
+			<?php echo $this->Html->link('Log In',array('controller' => 'users', 'action' => 'login')); ?>
         </li>
 		<li class="accountButtons">
-			<?php echo $this->Html->link('Register',array('controller' => 'users', 'action' => 'add')); ?>
+			<?php echo $this->Html->link('Sign In',array('controller' => 'users', 'action' => 'add')); ?>
 		</li>
 	</ul>
 	
