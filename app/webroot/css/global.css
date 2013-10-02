@@ -15,8 +15,6 @@ body{
 div.content{
 	margin:2%;
 	margin-top:5em;
-	margin-left: 10%;
-	width:80%;
 }
 
 /*
@@ -42,10 +40,29 @@ div.content div.textDisplay{
 	border-radius: 1em;
 	box-shadow: 5px 5px 5px #888888;
 	padding: 1em;
+	width:50%;
+	float:left;
 }
 
 div.textDisplay p{
 	margin-bottom: 1em;
+}
+
+div.rightDisplay{
+	float:right;
+	width:40%;
+
+}
+div.tableDisplay{
+	background-color: white;
+	border-radius: 1em;
+	box-shadow: 5px 5px 5px #888888;
+	padding: 1em;
+	margin-bottom: 2em;
+}
+
+div.tableDisplay table{
+	font-size: 15px;
 }
 
 /*

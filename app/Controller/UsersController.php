@@ -48,19 +48,20 @@ class UsersController extends AppController{
         if($this->request->is('post'))
         {
             $this->User->create();
-            $user = $this->User->save($this->request->data);
-            $this->User->save($this->request->data);
 
             $str_upper_role = strtoupper($this->request->data['User']['role']);
             $username = $this->request->data['User']['username'];
 
 
-            if($this->Band->set('user_id', $this->User->find('first',array('conditions'=>array('username'=> $username)))))
+            //if($this->Band->set('user_id', $this->User->find('first',array('conditions'=>array('username'=> $username)))))
+            $userInBase = $this->User->find('first',array('conditions'=>array('username'=> $username)));
+            if($userInBase)
             {           
                 $this->Session->setFlash(__('Username is already used')); 
             }
             else
             {
+                $this->User->save($this->request->data);
                 //If it's a band 
                 if($str_upper_role == 'BAND'){
                     $this->Band->create();
