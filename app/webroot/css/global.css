@@ -7,7 +7,7 @@
 }
 
 body{
-	background-color:white;
+	background-color:#ecf0f1;
 	font-family: "Avantgarde", sans-serif;
 
 }
@@ -28,11 +28,11 @@ h1{
 
 a{
 	text-decoration: none;
-	color:lavender;
+	color:white;
 }
 
 a:hover{
-	color:white;
+	color:#ecf0f1;
 }
 
 /*

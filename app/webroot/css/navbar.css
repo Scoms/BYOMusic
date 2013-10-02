@@ -1,6 +1,6 @@
 ul.navbar{
 	/*Color*/
-	background-color:#262626; 
+	background-color:#e74c3c; 
 	
 	/*Size*/
 	height: 3em;
@@ -20,7 +20,7 @@ ul.navbar li{
 	display: inline-block;
 
 	/*Text*/
-	color:lavender;
+	color:black;
 	font-family:"Avantgarde",sans-serif;
 }
 

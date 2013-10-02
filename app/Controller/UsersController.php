@@ -6,7 +6,7 @@ class UsersController extends AppController{
 
     public function beforeFilter() {
         parent::beforeFilter();
-        //$this->Auth->allow('add', 'logout');
+        $this->Auth->allow('add', 'logout');
     }
 
     /*
@@ -27,7 +27,7 @@ class UsersController extends AppController{
     }
 
     public function logout() {
-        return $this->redirect($this->Auth->logout());
+        $this->redirect($this->Auth->logout());
     }
 
     public function listAll(){

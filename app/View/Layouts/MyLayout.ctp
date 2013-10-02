@@ -25,17 +25,30 @@
 		<li>
 			<?php echo $this->Html->link('BYOMusic',array('controller' => 'Home', 'action' => 'index')); ?>
 		</li>
-		<li class="accountButtons">
-			<?php echo $this->Html->link('Log In',array('controller' => 'users', 'action' => 'login')); ?>
-        </li>
-		<li class="accountButtons">
-			<?php echo $this->Html->link('Sign In',array('controller' => 'users', 'action' => 'add')); ?>
-		</li>
+
+		<?php if(AuthComponent::user('username')): ?>
+			<li>
+				<?php echo AuthComponent::user('username') ?>
+			</li>
+			<li class="accountButtons">
+				<?php echo $this->Html->link('Log Out',array('controller' => 'users', 'action' => 'logout')); ?>
+	        </li>
+		<?php else: ?>
+			<li class="accountButtons">
+				<?php echo $this->Html->link('Log In',array('controller' => 'users', 'action' => 'login')); ?>
+	        </li>
+			<li class="accountButtons">
+				<?php echo $this->Html->link('Sign In',array('controller' => 'users', 'action' => 'add')); ?>
+			</li>
+		<?php endif ?>
 	</ul>
 	
 	<!-- Content -->
 	<div class="content">
-		<?php echo $this->fetch('content') ?>
+		<?php
+			echo $this->Session->flash(); 
+			echo $this->fetch('content');
+		?>
 	</div>
 </body>
 </html>
