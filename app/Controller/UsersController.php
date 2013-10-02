@@ -2,7 +2,7 @@
 
 class UsersController extends AppController{
 
-    var $uses = array('Band','User');
+    var $uses = array('Band','User','Manager');
 
     public function beforeFilter() {
         parent::beforeFilter();
@@ -21,7 +21,7 @@ class UsersController extends AppController{
                 //return $this->redirect($this->Auth->redirect());
                 return $this->redirect(array('controller'=>'Home'));
             } else {
-                $this->Session->setFlash(__('Nom d\'user ou mot de passe invalide, réessayer'));
+                $this->Session->setFlash(__('Bad credentials'));
             }
         }
     }
@@ -43,43 +43,43 @@ class UsersController extends AppController{
         $this->set('user', $this->User->read(null, $id));
     }
 
-    public function add() {
+    public function add() 
+    {
         if($this->request->is('post'))
         {
-            $str_upper_role = strtoupper($this->request->data['User']['role']);
-            
-            //If it's a band 
-            if($str_upper_role == 'BAND'){
-                $this->User->create();
-                $user = $this->User->save($this->request->data);
-                $this->User->save($this->request->data);
-
-                $username = $this->request->data['User']['username'];
-                $this->Band->create();
-                $this->Band->set('user_id', $this->User->find('first',
-                    array('conditions'=>array('username'=> $username))
-                )['User']['id']);
-                $this->Band->save();
-
-                $this->Session->setFlash(__('Your account has been successfuly created !'));
-                return $this->redirect(array('controller'=> 'Home'));
-            }
-            else if($str_upper_role == 'MANAGER'){
-
-            }
-            //$this->User->create();
-        }
-        /*
-        if ($this->request->is('post')) {
             $this->User->create();
-            //$this->Band->create();
-            if ($this->User->save($this->request->data)) {
-                $this->Session->setFlash(__('L\'user a été sauvegardé'));
-                return $this->redirect(array('action' => 'listAll'));
-            } else {
-                $this->Session->setFlash(__('L\'user n\'a pas été sauvegardé. Merci de réessayer.'));
+            $user = $this->User->save($this->request->data);
+            $this->User->save($this->request->data);
+
+            $str_upper_role = strtoupper($this->request->data['User']['role']);
+            $username = $this->request->data['User']['username'];
+
+
+            if($this->Band->set('user_id', $this->User->find('first',array('conditions'=>array('username'=> $username)))))
+            {           
+                $this->Session->setFlash(__('Username is already used')); 
             }
-        }*/
+            else
+            {
+                //If it's a band 
+                if($str_upper_role == 'BAND'){
+                    $this->Band->create();
+                    $this->Band->set('user_id', $this->User->find('first',
+                        array('conditions'=>array('username'=> $username))
+                    )['User']['id']);
+                    $this->Band->save();
+                }
+                else if($str_upper_role == 'MANAGER'){
+                    $this->Manager->create();
+                    $this->Manager->set('user_id', $this->User->find('first',
+                        array('conditions'=>array('username'=> $username))
+                    )['User']['id']);
+                    $this->Manager->save();
+                }
+                $this->Session->setFlash(__('Your account has been successfuly created !')); 
+                return $this->redirect(array('controller'=> 'Home'));  
+            }    
+       }
     }
 
     public function edit($id = null) {

@@ -1,0 +1,9 @@
+div.message{
+	/*Style*/
+	background-color:lightgrey;
+	background-repeat: no-repeat;
+
+	/*Position*/
+	padding: 2em;
+	float:right;
+}

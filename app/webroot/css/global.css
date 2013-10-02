@@ -15,15 +15,17 @@ body{
 div.content{
 	margin:2%;
 	margin-top:5em;
+	margin-left: 10%;
+	width:80%;
 }
 
 /*
-* Titles and test 
+* Titles and text 
 */
 
 h1{
 	font-weight: normal;
-	margin-bottom: 1em;
+	margin: 1em;
 }
 
 a{
@@ -33,6 +35,17 @@ a{
 
 a:hover{
 	color:#ecf0f1;
+}
+
+div.content div.textDisplay{
+	background-color: white;
+	border-radius: 1em;
+	box-shadow: 5px 5px 5px #888888;
+	padding: 1em;
+}
+
+div.textDisplay p{
+	margin-bottom: 1em;
 }
 
 /*
