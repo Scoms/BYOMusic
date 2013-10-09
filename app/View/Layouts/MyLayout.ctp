@@ -15,6 +15,7 @@
 		echo $this->Html->css("forms");
 		echo $this->Html->css("message");
 		echo $this->Html->css("table");
+		echo $this->Html->css("bandDisplay");
 	?>
 
 	<!-- Auto Imports -->
@@ -30,9 +31,13 @@
 		<?php if(AuthComponent::user('username')): ?>
 			<li>
 				<?php if(strtoupper(AuthComponent::user('role'))=='BAND'): ?>
-					<?php echo $this->Html->link(AuthComponent::user('username'),array('controller' => 'bands', 'action' => 'edit')); ?>
+					<?php echo $this->Html->link(AuthComponent::user('username'),array(
+						'controller' => 'bands',
+						'action' => 'index',
+						AuthComponent::user('id'))); 
+					?>
 				<?php elseif (strtoupper(AuthComponent::user('role'))=='MANAGER'): ?>
-					<?php echo $this->Html->link(AuthComponent::user('username'),array('controller' => 'managers', 'action' => 'edit')); ?>
+					<?php echo $this->Html->link(AuthComponent::user('username'),array('controller' => 'managers', 'action' => 'in')); ?>
 				<?php endif ?>
 			</li>
 			<li class="accountButtons">

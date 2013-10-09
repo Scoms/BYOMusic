@@ -68,6 +68,7 @@ class UsersController extends AppController{
                     $this->Band->set('user_id', $this->User->find('first',
                         array('conditions'=>array('username'=> $username))
                     )['User']['id']);
+                    $this->Band->set('name',$username);
                     $this->Band->save();
                 }
                 else if($str_upper_role == 'MANAGER'){

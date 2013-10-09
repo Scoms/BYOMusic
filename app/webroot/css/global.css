@@ -37,8 +37,6 @@ a:hover{
 
 div.content div.textDisplay{
 	background-color: white;
-	border-radius: 1em;
-	box-shadow: 5px 5px 5px #888888;
 	padding: 1em;
 	width:50%;
 	float:left;
@@ -50,13 +48,11 @@ div.textDisplay p{
 
 div.rightDisplay{
 	float:right;
-	width:40%;
+	width:45%;
 
 }
 div.tableDisplay{
 	background-color: white;
-	border-radius: 1em;
-	box-shadow: 5px 5px 5px #888888;
 	padding: 1em;
 	margin-bottom: 2em;
 }

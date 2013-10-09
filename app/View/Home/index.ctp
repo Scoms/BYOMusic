@@ -27,7 +27,7 @@
 			</tr>
 			<?php foreach ($bands as $band): ?>
 			<tr>
-				<td><?php echo $band['Display']['User']['username'] ?></td>
+				<td><?php echo $band['Display']['Band']['name'] ?></td>
 				<td><?php echo $band['Display']['User']['created'] ?></td>
 			</tr>
 			<?php endforeach ?>

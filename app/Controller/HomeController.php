@@ -8,9 +8,14 @@ class HomeController extends AppController
 	{
 		$bandsDisplay = array();
 		
-		$bands = $this->Band->find('all',array(
-			'limit'=>5
+		$bands = $this->User->find('all',array(
+			'limit' => 5,
+			'conditions' => array(
+				array('role' => 'band'
+				)),
+			'order' => 'created desc'
 		));
+
 
 		foreach ($bands as $band) 
 		{
@@ -24,6 +29,7 @@ class HomeController extends AppController
 				"Display"=> $user
 				));
 		}
+
 		$this->set('bands',$bandsDisplay);
 		$this->set('title_for_layout','');
 	}
