@@ -26,8 +26,14 @@
 				<th>Created</th>
 			</tr>
 			<?php foreach ($bands as $band): ?>
-			<tr>
-				<td><?php echo $band['Display']['Band']['name'] ?></td>
+			<tr >
+				<td>
+					<?php echo $this->Html->link($band['Display']['Band']['name'],array(
+						'controller' => 'bands',
+						'action' => 'index',
+						$band['Display']['User']['id']));
+					?>
+				</td>
 				<td><?php echo $band['Display']['User']['created'] ?></td>
 			</tr>
 			<?php endforeach ?>

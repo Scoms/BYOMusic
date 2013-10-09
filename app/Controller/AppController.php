@@ -44,7 +44,7 @@ class AppController extends Controller {
 	);
     public $layout = 'MyLayout';
     public function beforeFilter() {
-        $this->Auth->allow('index', 'add');
+        $this->Auth->allow('index','show');
     }
 
     public function isAuthorized($user) {
