@@ -36,3 +36,15 @@ ul.navbar li:hover{
 	color:white;
 	cursor: pointer;
 }
+
+/*
+* Submenu
+*/
+div.submenu{
+	list-style: none;
+	float;right;
+	margin-bottom: 1em;
+	padding: 0.3em;
+	width:auto;
+	text-align: center;
+}
