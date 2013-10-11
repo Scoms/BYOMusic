@@ -12,6 +12,7 @@
 	<?php 
 		echo $this->Html->css("navbar");
 		echo $this->Html->css("global");
+		echo $this->Html->css("global.responsive");
 		echo $this->Html->css("forms");
 		echo $this->Html->css("message");
 		echo $this->Html->css("table");

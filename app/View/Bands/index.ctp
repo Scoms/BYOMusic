@@ -1,3 +1,5 @@
+
+<?php if($editable) : ?>
 	<div class="submenu">
 		<li>
 			<?php  
@@ -9,10 +11,9 @@
 			?>
 		</li>
 	</div>
+<?php endif ?>
 
 <div class='textDisplay'>
-	<?php if($editable) : ?>
-<?php endif ?>
 	<h1><?php echo $band['Band']['name'] ?></h1>
 </div>
 <div class='rightDisplay'>

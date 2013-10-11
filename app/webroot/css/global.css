@@ -13,8 +13,8 @@ body{
 }
 
 div.content{
-	margin:2%;
 	margin-top:5em;
+	display: block;
 }
 
 /*
@@ -37,27 +37,32 @@ a:hover{
 
 div.content div.textDisplay{
 	background-color: white;
-	padding: 1em;
-	width:50%;
+	width:60%;
+	padding:1em;
 	float:left;
+}
+
+div.rightDisplay{
+	width:30%;
+	float:right;
+	margin-right: 2em;
 }
 
 div.textDisplay p{
 	margin-bottom: 1em;
+	margin-left: 1em;
 }
 
-div.rightDisplay{
-	float:right;
-	width:45%;
-
-}
 div.tableDisplay{
 	background-color: white;
 	padding: 1em;
-	margin-bottom: 2em;
+	margin-bottom: 1em;
 }
 
 div.tableDisplay table{
 	font-size: 15px;
 }
 
+div.textDisplay, div.rightDisplay{
+	margin-left: 2em;
+}
