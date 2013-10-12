@@ -1,21 +1,23 @@
 table{
 	font-size: 0.5em;
     border-collapse:collapse;
-    color:white;
+    color:black;
 }
 
-tr{
-	background-color: #e74c3c;
+table a{
+	color:black;
+	display: block;
 }
+
 tr:hover{
-	background-color: #ecf0f1;
 	color:black;
 }
-
-th{
-	background-color: #c0392b;
+tr{
+	background-color: white;
 }
-
+th{
+	background-color: #2980b9;
+}
 th, td {
 	font-weight: normal;
 	text-align: left;

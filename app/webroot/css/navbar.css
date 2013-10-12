@@ -1,7 +1,8 @@
 ul.navbar{
 	/*Color*/
-	background-color:#e74c3c; 
-	
+	/*background-color:#e74c3c; 
+	*/
+	background-color: #2980b9;
 	/*Size*/
 	height: 3em;
 	width:100%;

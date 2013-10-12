@@ -2,36 +2,46 @@
  * Global set
  */
 fieldset{
+
 	background-color: white;
 	border:none;
 }
 
 fieldset legend{
 	/*Style*/
-	background-color:grey;
+	background-color:#27ae60;
 	font-size: 1.3em;
+	width:300px;
 
 	/*Position*/
-	margin-left:2%;
-	padding:.3em; 
+	padding: 1em; 
 }
 
 fieldset div.input{
-	padding: .5em;
+	padding: 1em;
 }
 
 fieldset div.input input, fieldset div.input select{
 	float:right;
+	border:solid black 1px;
 }
 
 fieldset input[type="submit"]{
-	/*Style*/
-	box-shadow: none;
-
-
 	/*Postion*/
-	margin-left: 1em;
-	margin-bottom: 1em;
+	position: relative;
+	bottom: 169px;
+	left:275px;
+	color:transparent;
+
+	/*style*/
+	background-image: url("/BYOMusic/img/login.png");
+	background-size: 50px;
+	background-position: 9px 9px;
+	background-repeat: no-repeat;
+	border:none;
+	background-color: #2ecc71;
+	width: 67px;
+	height: 67px;
 }
 
 /*

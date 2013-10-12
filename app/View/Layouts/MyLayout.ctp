@@ -27,7 +27,9 @@
 	<!-- Navigation Bar-->
 	<ul class="navbar">
 		<li>
-			<?php echo $this->Html->link('BYOMusic',array('controller' => 'Home', 'action' => 'index')); ?>
+			<?php
+				echo $this->Html->link('BYOMusic',array('controller' => 'Home', 'action' => 'index'));
+			?>
 		</li>
 		<?php if(AuthComponent::user('username')): ?>
 			<li>
