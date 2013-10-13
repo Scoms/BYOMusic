@@ -1,12 +1,8 @@
 @media (max-width: 700px) {
 
 div.content{
-	padding:1em;
-	margin-bottom: 0;
-	margin-top:3em;
 }
 div.content div.textDisplay{
-	margin: 0;
 	margin-bottom:1em;
 	padding: 1em;
 	width:95%;
