@@ -28,13 +28,13 @@
 			<?php foreach ($bands as $band): ?>
 			<tr >
 				<td>
-					<?php echo $this->Html->link($band['Display']['Band']['name'],array(
+					<?php echo $this->Html->link($band['Band']['name'],array(
 						'controller' => 'bands',
 						'action' => 'index',
-						$band['Display']['User']['id']));
+						$band['User']['id']));
 					?>
 				</td>
-				<td><?php echo $band['Display']['User']['created'] ?></td>
+				<td><?php echo $band['User']['created'] ?></td>
 			</tr>
 			<?php endforeach ?>
 		</table>

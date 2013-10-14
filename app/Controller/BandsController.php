@@ -1,8 +1,19 @@
 <?php
 
-class BandsController extends AppController{
-	
-	public function index($id=null)
+class BandsController extends AppController
+{
+    public function beforeFilter() {
+        parent::beforeFilter();
+        $this->Auth->allow('index','view');
+    }
+
+    public function isAuthorized($user = null) {
+    	//return true;
+    	//$this->Session->setFlash('Gordon','default',array('class'=>'flashGordon'));
+    	$this->Session->setFlash('You must be logged to access that location.');
+    }
+
+	public function view($id=null)
 	{
 		$editable = $id == AuthComponent::user('id') ? true : false;
 		$band = $this->Band->find('first',array(
@@ -14,21 +25,19 @@ class BandsController extends AppController{
 		$this->set('editable',$editable);
 		$this->set('id',$id);
 	}
-	
-	
-	public function show()
-	{
-		$this->Band->recursive = 0;
-		$this->set('band',$this->paginate());
-		/*
-		$band = $this->Band->find('first',array(
-			'conditions' => array(
-				'id'=>$id)
-			));	
 
-        $this->Band->recursive = 0;
-		$this->set('band',$this->paginate());
-		*/
+	public function edit() 
+	{
+
 	}
+
+	public function index(){
+
+	}
+	/*public function edit()
+	{
+		$this->log('ta race');
+		$this->redirect('bra');
+	}*/
 }
 ?>

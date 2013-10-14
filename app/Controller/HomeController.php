@@ -16,7 +16,7 @@ class HomeController extends AppController
 			'order' => 'created desc'
 		));
 
-
+/*
 		foreach ($bands as $band) 
 		{
 			$user = $this->User->find('first',array(
@@ -29,8 +29,8 @@ class HomeController extends AppController
 				"Display"=> $user
 				));
 		}
-
-		$this->set('bands',$bandsDisplay);
+*/
+		$this->set('bands',$bands);
 		$this->set('title_for_layout','');
 	}
 }

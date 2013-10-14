@@ -6,6 +6,9 @@ div.message{
 	/*Position*/
 	padding: 2em;
 	float:right;
+	position: absolute;
+	bottom: 0;
+	right:0;
 
 	
 }

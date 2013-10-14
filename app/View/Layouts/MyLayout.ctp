@@ -36,7 +36,7 @@
 				<?php if(strtoupper(AuthComponent::user('role'))=='BAND'): ?>
 					<?php echo $this->Html->link(AuthComponent::user('username'),array(
 						'controller' => 'bands',
-						'action' => 'index',
+						'action' => 'view',
 						AuthComponent::user('id'))); 
 					?>
 				<?php elseif (strtoupper(AuthComponent::user('role'))=='MANAGER'): ?>
@@ -59,7 +59,7 @@
 	<!-- Content -->
 	<div class="content">
 		<?php
-			echo $this->Session->flash(); 
+			echo $this->Session->flash();
 			echo $this->fetch('content');
 		?>
 	</div>

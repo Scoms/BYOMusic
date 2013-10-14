@@ -28,10 +28,8 @@ fieldset div.input input, fieldset div.input select{
 
 fieldset input[type="submit"]{
 	/*Postion*/
-	position: relative;
-	bottom: 169px;
-	left:275px;
 	color:transparent;
+	float:right;
 
 	/*style*/
 	background-image: url("/BYOMusic/img/login.png");
