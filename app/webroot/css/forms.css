@@ -56,3 +56,7 @@ fieldset input[type="submit"]{
   fieldset#logIn{
   	width:25%;
   }
+
+div .select2-container{
+	min-width: 200px;
+}

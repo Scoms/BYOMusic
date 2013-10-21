@@ -5,7 +5,7 @@
 			<?php  
 				echo $this->Html->link(
 				    $this->Html->image("edit.png", array("alt" => "Edit")),
-				    array("action"=>"edit"),
+				    array("action"=>"edit",$id),
 				    array('escape' => false)
 				);
 			?>
@@ -15,7 +15,7 @@
 <div class='textDisplay'>
 	<h1><?php echo $band['Band']['name'] ?></h1>
 	<p>Creation : <?php echo $band['User']['created'] ?></p>
-	<p>Country : <?php echo $band['Country']['id'] == null ? "undefined" : $band['Country']['label_en']; ?>
+	<p>Country : <?php echo $band['User']['Country']['id'] == null ? "undefined" : $band['User']['Country']['label_en']; ?>
 	<p><?php echo var_dump($band) ?></p>
 </div>
 <div class='rightDisplay'>

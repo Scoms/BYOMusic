@@ -1,10 +1,16 @@
 <?php
 
 App::uses('AuthComponent', 'Controller/Component');
+App::import('model', 'Band');
+App::import('model', 'Country');
 
 class User extends AppModel{
 	public $name = 'User';
     public $hasOne = array('Band','Manager');
+    public $belongsTo = array('Country' => array(
+            'classname' => 'Country'
+            )
+        );
 
     public $validate = array(
         'username' => array(

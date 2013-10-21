@@ -30,7 +30,7 @@
 				<td>
 					<?php echo $this->Html->link($band['Band']['name'],array(
 						'controller' => 'bands',
-						'action' => 'index',
+						'action' => 'view',
 						$band['User']['id']));
 					?>
 				</td>

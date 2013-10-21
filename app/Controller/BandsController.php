@@ -2,15 +2,15 @@
 
 class BandsController extends AppController
 {
+	var $uses = array('User','Band','Country');
+
     public function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow('index','view');
+        $this->Auth->allow('index','view');		
     }
 
-    public function isAuthorized($user = null) {
-    	//return true;
-    	//$this->Session->setFlash('Gordon','default',array('class'=>'flashGordon'));
-    	$this->Session->setFlash('You must be logged to access that location.');
+    public function isAuthorized($user) {
+    	return true;
     }
 
 	public function view($id=null)
@@ -18,7 +18,8 @@ class BandsController extends AppController
 		$editable = $id == AuthComponent::user('id') ? true : false;
 		$band = $this->Band->find('first',array(
 			'conditions' => array(
-				'user_id'=> $id )
+				'user_id'=> $id ),
+			'recursive' => 2
 			));	
 
 		$this->set('band',$band);
@@ -26,18 +27,40 @@ class BandsController extends AppController
 		$this->set('id',$id);
 	}
 
-	public function edit() 
+	public function edit($id) 
 	{
 
+		if(AuthComponent::user('id') != $id)
+		{
+			$this->redirect(array('controller'=>'Errors','action'=>'forbidden'));
+		}
+
+		if($this->request->is('post'))
+		{
+			$this->Band->create();
+			$this->Band->id = $this->User->findById($id)['Band']['id'];
+			var_dump($this->request->data);
+			if($this->Band->saveAll($this->request->data,array('deep'=>true)))
+			{
+				$this->Session->setFlash('Data saved.');
+			}
+			else
+			{
+				$this->Session->setFlash('Oops ! Try again.');
+			}
+		}
+
+		$band = $this->Band->find('first',array(
+			'conditions' => array(
+				'user_id'=> $id ),
+			'recursive' => 2
+			));	
+		var_dump($band);
+		$this->set('band',$band);
 	}
 
 	public function index(){
 
 	}
-	/*public function edit()
-	{
-		$this->log('ta race');
-		$this->redirect('bra');
-	}*/
 }
 ?>
