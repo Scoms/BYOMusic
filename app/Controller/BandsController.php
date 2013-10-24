@@ -2,7 +2,7 @@
 
 class BandsController extends AppController
 {
-	var $uses = array('User','Band','Country');
+	var $uses = array('User','Band','Country','Style');
 
     public function beforeFilter() {
         parent::beforeFilter();
@@ -37,11 +37,11 @@ class BandsController extends AppController
 		
 		if($this->request->is('post'))
 		{
-			var_dump($this->request->data);
 			$this->Band->create();
 			if($this->Band->saveAll($this->request->data,array('deep'=>true)))
 			{
 				$this->Session->setFlash('Data saved.');
+				$this->redirect(array('action'=>'view',$id));
 			}
 			else
 			{
@@ -54,7 +54,9 @@ class BandsController extends AppController
 				'user_id'=> $id ),
 			'recursive' => 2
 			));	
+
 		$this->set('band',$band);
+		$this->set('styles',$this->Band->Style->find('list',array('fields'=>array('id','label'))));
 	}
 
 	public function index(){

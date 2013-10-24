@@ -7,22 +7,30 @@
 	<P><?php echo $this->Form->input('User.created',array('value' => $band['User']['created'])) ?></p>
 	<P><?php echo $this->Form->input('User.id',array('value' => $band['User']['id'],'type' => 'hidden')) ?></p>
 	<P>
-		<?php echo $this->Form->input('User.Country.label_en',array(
-		'value' => $band['User']['Country']['label_en'],
-		'label'=>$band['User']['Country']['label_en']
+		<?php echo $this->Form->input('User.Country',array(
+		'label'=>'',
 		)); ?>
-		<?php echo $this->Form->input('User.Country.id',array('value'=>$band['User']['Country']['id'],'type'=>'hidden')) ?>
+        <?php echo $this->Form->input('User.Country.id',array('value'=>$band['User']['Country']['id'],'type'=>'hidden')) ?>
+		<?php echo $this->Form->input('oldCountry',array('value'=>$band['User']['Country']['label_en'],'type'=>'hidden')) ?>
 	</p>
+    <p><?php echo $this->Form->input('Style.label_en',array(
+            'label' => __('Styles :',true),
+            'type' => 'select',
+            'multiple' => 'checkbox',
+            'options' => $styles,
+            'selected' => $band['Style'],
+        )) ?>
+    </p>
 	<?php echo $this->Form->end('Update'); ?>	
 </div>
 
 <script type="text/javascript">
 
 $(document).ready(function(){
-	var oldCountry = $('#UserCountryLabelEn').val();
-	$('#UserCountryLabelEn').select2({
+	var oldCountry = $('#BandOldCountry').val();
+	$('#UserCountry').select2({
     minimumInputLength: 2,
-    placeholder:"ok",
+    placeholder: oldCountry,
     ajax: {
         url: "/BYOMusic/Countries/webService/"+$('#UserCountryLabelEn').val(),
         dataType: 'json',
@@ -37,7 +45,7 @@ $(document).ready(function(){
             };
         },
         initSelection: function (element, callback) {
-                            var data = { id: "ok", text: "ok" };
+                              var data = { id: "ok", text: "ok" };
                             callback(data);
                         }
     },
