@@ -2,6 +2,7 @@
 
 	<h1>Edit</h1>
 	<?php echo $this->Form->create('Band'); ?>	
+    <p><?php echo $this->Form->input('id',array('value'=> $band['Band']['id'],'type'=>'hidden')) ?></p>
 	<P><?php echo $this->Form->input('name',array('value' => $band['Band']['name'])) ?></p>
 	<P><?php echo $this->Form->input('User.created',array('value' => $band['User']['created'])) ?></p>
 	<P><?php echo $this->Form->input('User.id',array('value' => $band['User']['id'],'type' => 'hidden')) ?></p>
@@ -10,7 +11,7 @@
 		'value' => $band['User']['Country']['label_en'],
 		'label'=>$band['User']['Country']['label_en']
 		)); ?>
-		<?php echo $this->Form->input('User.Country.id',array('type'=>'hidden')) ?>
+		<?php echo $this->Form->input('User.Country.id',array('value'=>$band['User']['Country']['id'],'type'=>'hidden')) ?>
 	</p>
 	<?php echo $this->Form->end('Update'); ?>	
 </div>

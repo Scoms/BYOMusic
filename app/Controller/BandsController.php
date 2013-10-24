@@ -34,12 +34,11 @@ class BandsController extends AppController
 		{
 			$this->redirect(array('controller'=>'Errors','action'=>'forbidden'));
 		}
-
+		
 		if($this->request->is('post'))
 		{
-			$this->Band->create();
-			$this->Band->id = $this->User->findById($id)['Band']['id'];
 			var_dump($this->request->data);
+			$this->Band->create();
 			if($this->Band->saveAll($this->request->data,array('deep'=>true)))
 			{
 				$this->Session->setFlash('Data saved.');
@@ -55,7 +54,6 @@ class BandsController extends AppController
 				'user_id'=> $id ),
 			'recursive' => 2
 			));	
-		var_dump($band);
 		$this->set('band',$band);
 	}
 
