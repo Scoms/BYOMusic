@@ -11,6 +11,7 @@
 		echo $this->Html->script('jquery');
 		echo $this->Html->script('select2/select2.min');
 	?>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 	<!-- CSS Files -->
 	<?php 
 		echo $this->Html->css("navbar");
@@ -22,6 +23,7 @@
 		echo $this->Html->css("bandDisplay");
 		echo $this->Html->css("select2");
 	?>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 
 	<!-- Auto Imports -->
 </head>

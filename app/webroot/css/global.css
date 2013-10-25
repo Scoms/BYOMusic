@@ -35,6 +35,7 @@ a:hover{
 	color:#ecf0f1;
 }
 
+
 div.content div.textDisplay, div.tableDisplay{
 	border:solid #3498db 1px;
 	background-color: #ecf0f1;
@@ -48,9 +49,9 @@ div.content div.textDisplay{
 }
 
 div.rightDisplay{
-	width:33%;
+	width:32%;
 	float:right;
-	margin-right: 2em;
+	margin-right: 3em;
 }
 
 div.textDisplay p{
@@ -69,4 +70,19 @@ div.tableDisplay table{
 	margin-right: auto;
 	width:100%;
 	max-width: 300px;
+}
+
+/**
+* ul and li 
+*/
+
+div.textDisplay ul
+{
+	padding: 1em;
+	padding-top: 0;
+}
+div.textDisplay li
+{
+	list-style: none;
+	padding-left: 1em;
 }

@@ -43,7 +43,16 @@ ul.navbar li:hover{
 */
 div.submenu{
 	list-style: none;
-	padding: 0.3em;
 	position: fixed;
 	top: 3em;
+	height: 100%;
+	right: 0;
+	padding:.5em;
+	padding-right: 0.2em;
+	background-color: #29B9AA;
+}
+
+div.submenu ul li{
+	list-style: none;
+	margin-bottom:.5em;
 }

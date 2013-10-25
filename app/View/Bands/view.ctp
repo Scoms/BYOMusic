@@ -1,26 +1,38 @@
 
 <?php if($editable) : ?>
-	<div class="submenu">
-		<li>
-			<?php  
-				echo $this->Html->link(
-				    $this->Html->image("edit.png", array("alt" => "Edit")),
-				    array("action"=>"edit",$id),
-				    array('escape' => false)
-				);
-			?>
-		</li>
+	<div id='sub' class="submenu">
+		<ul>
+			<li>
+				<?php  
+					echo $this->Html->link(
+					    $this->Html->image("edit.png", array("alt" => "Edit")),
+					    array("action"=>"edit",$id),
+					    array('escape' => false)
+					);
+				?>
+			</li>
+			<li>
+				<?php
+					echo $this->Html->link(
+						    $this->Html->image("musicnote.png", array("alt" => "Edit")),
+						    array("action"=>"addSongs",$id),
+						    array('escape' => false)
+						);
+				?>
+			</li>
+		</ul>
 	</div>
 <?php endif ?>
 <div class='textDisplay'>
 	<h1><?php echo $band['Band']['name'] ?></h1>
 	<p>Creation : <?php echo $band['User']['created'] ?></p>
-	<p>Country : <?php echo $band['User']['Country']['id'] == null ? "undefined" : $band['User']['Country']['label_en']; ?></p>
-	<p>Styles : 
-		<?php foreach ($band['Style'] as $style) {
-			echo $style;
-		}
-		?>
+	<p>Country : <?php echo $band['User']['Country'] == null ? "undefined" : $band['User']['Country']['label_en']; ?></p>
+	<p>Styles :
+		<ul> 
+			<?php foreach ($band['Style'] as $style):?>
+				<li title=<?php echo '"'.$style["description"].'"' ?> ><?php echo $style['label'] ?></li>
+			<?php endforeach ?>
+		</ul>
 	</p>
 </div>
 <div class='rightDisplay'>
@@ -31,3 +43,11 @@
 		<h2>Activities</h2>
 	</div>
 </div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    //Lolilol effect 
+    $('#sub').hide();
+    $('#sub').fadeIn(2000);
+});
+</script>

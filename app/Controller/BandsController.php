@@ -53,10 +53,15 @@ class BandsController extends AppController
 			'conditions' => array(
 				'user_id'=> $id ),
 			'recursive' => 2
-			));	
-
+			));
+		$selected_styles = array();	
+		foreach ($band['Style'] as $style) {
+			array_push($selected_styles, $style['id']);
+		}
+		
 		$this->set('band',$band);
 		$this->set('styles',$this->Band->Style->find('list',array('fields'=>array('id','label'))));
+		$this->set('styles_selected',$selected_styles);
 	}
 
 	public function index(){

@@ -4,7 +4,7 @@
 	<?php echo $this->Form->create('Band'); ?>	
     <p><?php echo $this->Form->input('id',array('value'=> $band['Band']['id'],'type'=>'hidden')) ?></p>
 	<P><?php echo $this->Form->input('name',array('value' => $band['Band']['name'])) ?></p>
-	<P><?php echo $this->Form->input('User.created',array('value' => $band['User']['created'])) ?></p>
+	<P><?php echo $this->Form->input('User.created',array('value' => $band['User']['created'],'type'=>'text')) ?></p>
 	<P><?php echo $this->Form->input('User.id',array('value' => $band['User']['id'],'type' => 'hidden')) ?></p>
 	<P>
 		<?php echo $this->Form->input('User.Country',array(
@@ -13,12 +13,12 @@
         <?php echo $this->Form->input('User.Country.id',array('value'=>$band['User']['Country']['id'],'type'=>'hidden')) ?>
 		<?php echo $this->Form->input('oldCountry',array('value'=>$band['User']['Country']['label_en'],'type'=>'hidden')) ?>
 	</p>
-    <p><?php echo $this->Form->input('Style.label_en',array(
+    <p><?php echo $this->Form->input('Style',array(
             'label' => __('Styles :',true),
             'type' => 'select',
             'multiple' => 'checkbox',
             'options' => $styles,
-            'selected' => $band['Style'],
+            'selected' => $styles_selected
         )) ?>
     </p>
 	<?php echo $this->Form->end('Update'); ?>	
@@ -27,6 +27,12 @@
 <script type="text/javascript">
 
 $(document).ready(function(){
+    //Date
+    $('#UserCreated').datepicker({
+        dateFormat: 'yy-mm-dd'
+        });
+    $("#UserCreated").keypress(function(event) {event.preventDefault();});
+    //Country
 	var oldCountry = $('#BandOldCountry').val();
 	$('#UserCountry').select2({
     minimumInputLength: 2,
