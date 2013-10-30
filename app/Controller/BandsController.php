@@ -1,8 +1,11 @@
 <?php
 
+App::uses('File', 'Utility'); 
+App::uses('Folder', 'Utility'); 
+
 class BandsController extends AppController
 {
-	var $uses = array('User','Band','Country','Style');
+	var $uses = array('User','Band','Country','Style','Song');
 
     public function beforeFilter() {
         parent::beforeFilter();
@@ -22,7 +25,15 @@ class BandsController extends AppController
 			'recursive' => 2
 			));	
 
+		$songs = $this->Song->find('all',array(
+			'conditions' => array(
+				'band_id' => $id
+				),
+			'limit' => 5
+			));
+
 		$this->set('band',$band);
+		$this->set('songs',$songs);
 		$this->set('editable',$editable);
 		$this->set('id',$id);
 	}
@@ -64,8 +75,18 @@ class BandsController extends AppController
 		$this->set('styles_selected',$selected_styles);
 	}
 
-	public function index(){
+	public function addSongs($id){
 
+		if($this->request->is('post'))
+		{
+			$this->Song->create();
+			$this->Song->set('band_id',$id);
+			var_dump($this->Song->uploadFile($this->request->data['Song'],$id));
+			if($this->Song->save($this->request->data['Song']['path']))
+			{
+				$this->Session->setFlash('Song uploaded');
+			}
+		}
 	}
 }
 ?>

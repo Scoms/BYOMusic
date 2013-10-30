@@ -37,7 +37,13 @@
 </div>
 <div class='rightDisplay'>
 	<div class="tableDisplay">
-		<h2>Songs<h2>
+		<h2>Songs</h2>
+		<?php foreach ($songs as $song): ?>
+		<audio src="ok">
+			<audio preload="auto" autobuffer controls id="audio">
+				 <?php echo '<source src="http://localhost/BYOMusic/app/webroot/files/songs/'.$id.DS.($song['Song']['path']).' "/>'?>
+			</audio>﻿
+		<?php endforeach ?>
 	</div>
 	<div class="tableDisplay">
 		<h2>Activities</h2>

@@ -36,7 +36,7 @@ a:hover{
 }
 
 
-div.content div.textDisplay, div.tableDisplay{
+div.content div.textDisplay, div.tableDisplay, fieldset{
 	border:solid #3498db 1px;
 	background-color: #ecf0f1;
 	box-shadow: 0px 2px 2px #888888;
