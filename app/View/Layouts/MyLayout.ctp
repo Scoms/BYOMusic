@@ -22,6 +22,7 @@
 		echo $this->Html->css("table");
 		echo $this->Html->css("bandDisplay");
 		echo $this->Html->css("select2");
+		echo $this->Html->css("dewplayer");
 	?>
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 

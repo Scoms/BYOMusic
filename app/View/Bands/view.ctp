@@ -39,10 +39,13 @@
 	<div class="tableDisplay">
 		<h2>Songs</h2>
 		<?php foreach ($songs as $song): ?>
-		<audio src="ok">
-			<audio preload="auto" autobuffer controls id="audio">
-				 <?php echo '<source src="http://localhost/BYOMusic/app/webroot/files/songs/'.$id.DS.($song['Song']['path']).' "/>'?>
-			</audio>﻿
+			<object type="application/x-shockwave-flash" data="http://localhost/BYOMusic/app/webroot/dewplayer/dewplayer.swf" width="240" height="20" id="dewplayer" name="dewplayer"> 
+				<param name="wmode" value="transparent" />
+				<param name="movie" value="dewplayer-rect.swf" />
+				
+			<?php echo '<param name="flashvars" value="mp3=http://localhost/BYOMusic/app/webroot/files/songs/'.$id.DS.$song['Song']['path'].'&amp;randomplay=1" />'
+			?>
+			</object>
 		<?php endforeach ?>
 	</div>
 	<div class="tableDisplay">
