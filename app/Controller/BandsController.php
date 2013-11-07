@@ -75,7 +75,7 @@ class BandsController extends AppController
 		$this->set('styles_selected',$selected_styles);
 	}
 
-	public function addSongs($id){
+	public function songsManagement($id){
 
 		if($this->request->is('post'))
 		{
@@ -87,6 +87,9 @@ class BandsController extends AppController
 				$this->Session->setFlash('Song uploaded');
 			}
 		}
+
+		$songs_no_album = $this->Song->find('all',array('conditions'=>array('band_id'=>$id,'album_id'=>null)));//,array('conditions'=>array('band_id'=>$id)));
+		$this->set('songs_no_album',$songs_no_album);
 	}
 }
 ?>

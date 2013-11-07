@@ -1,0 +1,11 @@
+div.bubbles{
+	display: block;
+}
+
+div.bubbles div.by3{
+	display: inline-block;
+	width:31%;
+	margin:1%;
+	background-color: yellow;
+	vertical-align: top;
+}

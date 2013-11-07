@@ -15,7 +15,7 @@
 				<?php
 					echo $this->Html->link(
 						    $this->Html->image("musicnote.png", array("alt" => "Edit")),
-						    array("action"=>"addSongs",$id),
+						    array("action"=>"songsManagement",$id),
 						    array('escape' => false)
 						);
 				?>

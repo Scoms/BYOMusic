@@ -23,6 +23,7 @@
 		echo $this->Html->css("bandDisplay");
 		echo $this->Html->css("select2");
 		echo $this->Html->css("dewplayer");
+		echo $this->Html->css("bubbles");
 	?>
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 

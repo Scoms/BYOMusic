@@ -4,15 +4,20 @@ class Song extends AppModel
 {
 	public $id;
 	public $path;
+	public $title;
+	public $album_title;
+	public $band_id;
 
 	public $validate = array(
 	'path' => array(
 	    'extension' => array(
-	        'rule' => array('extension', array('flac','mp4','waw','mp3')),
+	        'rule' => array('extension', array('mp4','waw','mp3')),
 	        'message' => 'Only audio files',
 	         )
 	)
 	);
+
+
 	public function uploadFile($check,$id) {
 
 	    $uploadData = array_shift($check);

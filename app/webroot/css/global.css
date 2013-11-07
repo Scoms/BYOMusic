@@ -12,8 +12,7 @@ body{
 }
 
 div.content{
-	padding-left: 2em;
-	margin-top: 6em;
+	margin-top: 3em;
 }
 
 /*
@@ -31,7 +30,6 @@ a{
 }
 
 a:hover{
-	color:blue;
 }
 
 

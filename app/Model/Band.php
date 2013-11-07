@@ -23,7 +23,7 @@ class Band extends AppModel{
 			)
 		);
 
-	public $hasOne = 'Song';
+	public $hasOne = array('Song','Album');
 
 	public function beforeSave($options = array()) {
         foreach (array_keys($this->hasAndBelongsToMany) as $model)
