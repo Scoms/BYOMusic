@@ -85,6 +85,7 @@ class BandsController extends AppController
 			if($this->Song->save($this->request->data['Song']['path']))
 			{
 				$this->Session->setFlash('Song uploaded');
+				$this->Session->setFlash('Song uploaded');
 			}
 		}
 

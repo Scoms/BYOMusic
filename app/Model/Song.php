@@ -12,6 +12,7 @@ class Song extends AppModel
 	'path' => array(
 	    'extension' => array(
 	        'rule' => array('extension', array('mp4','waw','mp3')),
+            'required' => true,
 	        'message' => 'Only audio files',
 	         )
 	)

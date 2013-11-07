@@ -2,10 +2,10 @@ div.bubbles{
 	display: block;
 }
 
-div.bubbles div.by3{
+div.bubbles div.by2{
 	display: inline-block;
-	width:31%;
+	width:45%;
 	margin:1%;
-	background-color: yellow;
 	vertical-align: top;
+	height:100%;
 }
