@@ -52,11 +52,3 @@
 		<h2>Activities</h2>
 	</div>
 </div>
-
-<script type="text/javascript">
-$(document).ready(function(){
-    //Lolilol effect 
-    $('#sub').hide();
-    $('#sub').fadeIn(2000);
-});
-</script>

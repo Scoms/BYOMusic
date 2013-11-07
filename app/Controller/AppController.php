@@ -43,6 +43,8 @@ class AppController extends Controller {
         )
 	);
     public $layout = 'MyLayout';
+    //public $layout = 'BootstrapLayout';
+    public $theme = 'Cakestrap';
     public function beforeFilter() {
         $this->Auth->allow('index','show');
     }
