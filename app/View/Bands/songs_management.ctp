@@ -17,38 +17,55 @@
 	</div>
 	<div class="by2">
 		<h1>Sort</h1>
-
-			<?php if(!is_null($songs_no_album)): ?>
+			<?php foreach ($songs as $song): ?>
+				<?php 
+					if(is_null($song['Song']['album_id'])){
+						echo $this->Form->create('Song',array('url' => array('controller' => 'songs', 'action' => 'edit',AuthComponent::user('id'))));
+						echo $this->Form->input('id',array('value'=>$song['Song']['id']));
+						echo $this->Form->input('path',array('value'=>$song['Song']['path'],'type'=>'hidden'));
+						echo $this->Form->input('title',array('label'=>false,'value'=>is_null($song['Song']['title']) ? $song['Song']['path'] : $song['Song']['title'])); 
+						echo $this->Form->input('album_id',array('type'=>'select','label'=>false,
+				  'empty' => 'choose'));
+						echo $this->Form->end('Edit');
+						echo $this->Html->link('x',array('controller'=>'songs','action'=>'remove',AuthComponent::user('id') ,$song['Song']['id']),array(),"Are you sure you wish to delete this awesome song ?"); 
+					}
+				?>
+			<?php endforeach ?>
+			
+			<?php foreach ($albums_for as $album): ?>
 				<table>
-					<caption>Uknown Album</caption>
+					<caption><?php echo $album['Album']['title'] ?></caption>
 					<tr>
 						<th>Title</th>
 						<th>Album</th>
 						<th>Edit</th>
 						<th>Remove</th>
 					</tr>
-				<?php foreach ($songs_no_album as $song) :?>
-					<tr>
-						<?php echo $this->Form->create('Song',array(
-   						 'url' => array('controller' => 'songs', 'action' => 'edit',AuthComponent::user('id'))));
-   						 ?>
-						<td>
-							<?php
-   							echo $this->Form->input('id',array('value'=>$song['Song']['id']));
-   							echo $this->Form->input('path',array('value'=>$song['Song']['path'],'type'=>'hidden'));
-							echo $this->Form->input('title',array('label'=>false,'value'=>is_null($song['Song']['title']) ? $song['Song']['path'] : $song['Song']['title'])); 
-							?>
-						</td>
-						<td><?php echo $this->Form->input('album',array('type'=>'select','label'=>false)) ?></td>
-						<td>
-						<?php echo $this->Form->end('Edit') ?>	
-						</td>
-						<td><?php echo $this->Html->link('x',array('controller'=>'songs','action'=>'remove',AuthComponent::user('id') ,$song['Song']['id']),array(),
-    "Are you sure you wish to delete this awesome song ?") ?></td>
-					</tr>
-				<?php endforeach ?>
+					<?php foreach ($songs as $song) :?>
+						<?php if($song['Song']['album_id'] == $album['Album']['id']): ?>
+							<tr>
+								<?php echo $this->Form->create('Song',array(
+									 'url' => array('controller' => 'songs', 'action' => 'edit',AuthComponent::user('id'))));
+									 ?>
+								<td>
+									<?php
+										echo $this->Form->input('id',array('value'=>$song['Song']['id']));
+										echo $this->Form->input('path',array('value'=>$song['Song']['path'],'type'=>'hidden'));
+									echo $this->Form->input('title',array('label'=>false,'value'=>is_null($song['Song']['title']) ? $song['Song']['path'] : $song['Song']['title'])); 
+									?>
+								</td>
+								<td><?php echo $this->Form->input('album_id',array('type'=>'select','label'=>false,
+			  'empty' => 'choose')) ?></td>
+								<td>
+								<?php echo $this->Form->end('Edit') ?>	
+								</td>
+								<td><?php echo $this->Html->link('x',array('controller'=>'songs','action'=>'remove',AuthComponent::user('id') ,$song['Song']['id']),array(),
+			"Are you sure you wish to delete this awesome song ?") ?></td>
+							</tr>
+						<?php endif ?>
+					<?php endforeach ?>
 				</table>
-			<?php endif ?>
+			<?php endforeach ?>
 	</div>
 
 </div>

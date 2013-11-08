@@ -89,9 +89,11 @@ class BandsController extends AppController
 		}
 
 		$albums = $this->Album->find('list',array('conditions'=>array('Album.band_id'=>$id),'fields'=>array('id','title')));
-		$songs_no_album = $this->Song->find('all',array('conditions'=>array('band_id'=>$id,'album_id'=>null)));//,array('conditions'=>array('band_id'=>$id)));
-		$this->set('songs_no_album',$songs_no_album);
+		$albums_for = $this->Album->find('all',array('conditions'=>array('Album.band_id'=>$id),'fields'=>array('id','title')));
+		$songs = $this->Song->find('all',array('conditions'=>array('band_id'=>$id)));//,array('conditions'=>array('band_id'=>$id)));
+		$this->set('songs',$songs);
 		$this->set('albums',$albums);
+		$this->set('albums_for',$albums_for);
 	}
 }
 ?>
