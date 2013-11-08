@@ -5,7 +5,7 @@ App::uses('Folder', 'Utility');
 
 class BandsController extends AppController
 {
-	var $uses = array('User','Band','Country','Style','Song');
+	var $uses = array('User','Band','Country','Style','Song','Album');
 
     public function beforeFilter() {
         parent::beforeFilter();
@@ -85,12 +85,13 @@ class BandsController extends AppController
 			if($this->Song->save($this->request->data['Song']['path']))
 			{
 				$this->Session->setFlash('Song uploaded');
-				$this->Session->setFlash('Song uploaded');
 			}
 		}
 
+		$albums = $this->Album->find('list',array('conditions'=>array('Album.band_id'=>$id),'fields'=>array('id','title')));
 		$songs_no_album = $this->Song->find('all',array('conditions'=>array('band_id'=>$id,'album_id'=>null)));//,array('conditions'=>array('band_id'=>$id)));
 		$this->set('songs_no_album',$songs_no_album);
+		$this->set('albums',$albums);
 	}
 }
 ?>

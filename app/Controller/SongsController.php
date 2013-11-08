@@ -29,6 +29,21 @@ class SongsController extends AppController{
     	}
     	$this->redirect(array('controller'=>'bands','action'=>'songsManagement',$user_id));
     }
+
+    public function edit($user_id)
+    {
+        if($this->request->is('post')){
+            $this->Song->create();
+            var_dump($this->Song->save($this->request->data));
+            if($this->Song->save($this->request->data)){
+                $this->Session->setFlash('Update completed');
+            }
+            else{
+                $this->Session->setFlash("oops");
+            }
+        }
+        $this->redirect(array('controller'=>'bands','action'=>'songsManagement',$user_id));
+    }
 }
 
 ?>

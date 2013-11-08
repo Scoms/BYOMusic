@@ -1,10 +1,18 @@
 <div class="bubbles">
 	<div class="by2">
-		<h1>Add </h1>
+		<h1>Add Songs</h1>
 			<?php
 				echo $this->Form->create('Song',array('type'=>'file'));
 				echo $this->Form->input('path',array('type'=>'file'));
 				echo $this->Form->end('Upload');
+			?>
+		<h1>Create an Album</h1>
+			<?php
+				echo $this->Form->create('Album',array(
+   						 'url' => array('controller' => 'albums', 'action' => 'add')));
+				echo $this->Form->input('title');
+				echo $this->Form->input('band_id',array('value'=>AuthComponent::user('id'),'type'=>'hidden'));
+				echo $this->Form->end('Create');
 			?>
 	</div>
 	<div class="by2">
@@ -22,11 +30,16 @@
 				<?php foreach ($songs_no_album as $song) :?>
 					<tr>
 						<?php echo $this->Form->create('Song',array(
-   						 'url' => array('controller' => 'songs', 'action' => 'edit'))) ?>
+   						 'url' => array('controller' => 'songs', 'action' => 'edit',AuthComponent::user('id'))));
+   						 ?>
 						<td>
-							<?php echo $this->Form->input('title',array('label'=>false,'value'=>is_null($song['Song']['title']) ? $song['Song']['path'] : $song['Song']['title'])) ?>
+							<?php
+   							echo $this->Form->input('id',array('value'=>$song['Song']['id']));
+   							echo $this->Form->input('path',array('value'=>$song['Song']['path'],'type'=>'hidden'));
+							echo $this->Form->input('title',array('label'=>false,'value'=>is_null($song['Song']['title']) ? $song['Song']['path'] : $song['Song']['title'])); 
+							?>
 						</td>
-						<td>Album</td>
+						<td><?php echo $this->Form->input('album',array('type'=>'select','label'=>false)) ?></td>
 						<td>
 						<?php echo $this->Form->end('Edit') ?>	
 						</td>
