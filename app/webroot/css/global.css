@@ -8,7 +8,21 @@
 
 body{
 	font-family: "Avantgarde", sans-serif;
+	background-image: url(../img/wallpaper.jpg);
+	background-repeat: no-repeat;
 
+	-webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+	margin-top: 0px;
+	color:white;
 }
 
 div.content{
@@ -38,9 +52,12 @@ div.tableDisplay, fieldset{
 }
 
 div.content div.textDisplay{
-	width:60%;
-	padding:1em;
+	margin-top: 2%;
+	margin-left: 2%;
 	float:left;
+	/*rgb(52, 152, 219)*/
+	display: inline;
+	background-color: rgba(52, 152, 219,0.5);
 }
 
 div.rightDisplay{
