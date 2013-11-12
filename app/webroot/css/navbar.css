@@ -19,7 +19,8 @@ ul.navbar li{
 	/*Position*/
 	display: inline-block;
 	position: relative;
-	padding-left: 5px;
+	margin-left: 5px;
+	padding: 0 5px 0 5px;
 	height: 100%;
 	vertical-align: middle;
 	/*Text*/
@@ -34,10 +35,18 @@ ul.navbar li a{
 	height: 100%;
 	padding-top:10px;
 }
+ul.navbar li:hover{
+   background-color: rgba(52, 152, 219,0.5);
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;	
+}
 
 ul.navbar li.accountButtons{
 	float:right;
-	padding-right: 1em;
+	margin: 0px 5px 0px 0px;
 }
 
 /*

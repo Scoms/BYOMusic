@@ -1,6 +1,8 @@
 $(document).ready(function(){
 
 	$('#logIn').hide();
+	//$('li').hover(alert('hover'));
+
 });
 
 function logInMenu(){
