@@ -1,6 +1,7 @@
 /*
 * Main Layout
 */
+
 *{
 	margin:0;
 	padding: 0;
@@ -15,7 +16,7 @@ body{
     -moz-background-size: 100%;
     -o-background-size: 100%;
     background-size: 100%;
-
+    min-height: 700px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

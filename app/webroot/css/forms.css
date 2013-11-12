@@ -1,15 +1,22 @@
-fieldset
+fieldset#logIn
 {
-	width:50%;
-	margin-left: 25%;
+	border: none;
+	/*background-color: rgba(52, 152, 219,0.5);*/
+	background-color: lavender;
+	color:black;
+	right:0;
+	position: absolute;
+	top:40px;
+	margin-right: 0;
+	float: right;
 }
 
-fieldset input, fieldset label
+fieldset#logIn legend{
+	background-color: rgba(52, 152, 219,0.5);
+	margin: 1%;
+}
+fieldset#logIn input, fieldset#logIn label
 {
 	margin: 1em;
 }
 
-fieldset input[type="submit"]
-{
-	
-}
