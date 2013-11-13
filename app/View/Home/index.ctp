@@ -1,4 +1,4 @@
-<div class="textDisplay">
+<div class="titleDisplay">
 	<h1>Bring Your Own Music</h1>
 </div>
 

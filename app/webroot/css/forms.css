@@ -6,3 +6,17 @@ li.logInForm{
 li.logInForm:hover{
 	background-color: none;
 }
+
+li.logInForm input{
+	width:8em;
+	border:none;
+}
+
+li.logInForm input[type='submit']{
+	width:auto;
+	padding: 0.2em;
+}
+
+li.logInForm label{
+	margin-right: 10px;
+}

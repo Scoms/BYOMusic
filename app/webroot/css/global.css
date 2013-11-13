@@ -16,18 +16,18 @@ body{
     -moz-background-size: 100%;
     -o-background-size: 100%;
     background-size: 100%;
-    min-height: 700px;
+
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-
-	margin-top: 0px;
-	color:white;
+    
+    min-height: 700px;
 }
 
 div.content{
 	margin-top: 3em;
+	padding:0;
 }
 
 /*
@@ -52,7 +52,7 @@ div.tableDisplay, fieldset{
 
 }
 
-div.content div.textDisplay{
+div.content div.titleDisplay{
 	margin-top: 2%;
 	margin-left: 2%;
 	float:left;
@@ -61,7 +61,19 @@ div.content div.textDisplay{
 	background-color: rgba(52, 152, 219,0.5);
 }
 
+div.content div.textDisplay{
+	margin-top: 2%;
+	margin-left: 2%;
+	float:left;
+	/*rgb(52, 152, 219)*/
+	display: inline;
+	color:black;
+	width:60%;
+	background-color: white;
+}
+
 div.rightDisplay{
+	display: inline;
 	width:32%;
 	float:right;
 	margin-right: 3em;
