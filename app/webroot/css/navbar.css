@@ -19,22 +19,24 @@ ul.navbar li{
 	/*Position*/
 	display: inline-block;
 	position: relative;
-	margin-left: 5px;
 	padding: 0 5px 0 5px;
 	height: 100%;
 	vertical-align: middle;
 	/*Text*/
-	color:black;
 	font-family:"Avantgarde",sans-serif;
 }
 
-ul.navbar li a{
-	vertical-align: bottom;
+ul.navbar li a,ul.navbar li div.input,ul.navbar li div.submit{
 	text-align: center;
 	display: block;
 	height: 100%;
 	padding-top:10px;
 }
+
+ul.navbar li div.input:hover,ul.navbar li div.submit:hover{
+	background-color: none;
+}
+
 ul.navbar li:hover{
    background-color: rgba(52, 152, 219,0.5);
   -o-transition:.5s;

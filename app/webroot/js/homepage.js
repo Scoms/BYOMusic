@@ -7,9 +7,9 @@ $(document).ready(function(){
 
 function logInMenu(){
 	if(!$('#logIn').is(':visible')){
-		$('#logIn').show();
+		$('#logIn').slideDown(500);
 	}
 	else{
-		$('#logIn').hide();
+		$('#logIn').slideUp(500);
 	}
 };

@@ -1,22 +1,8 @@
-fieldset#logIn
-{
-	border: none;
-	/*background-color: rgba(52, 152, 219,0.5);*/
-	background-color: lavender;
-	color:black;
-	right:0;
-	position: absolute;
-	top:40px;
-	margin-right: 0;
-	float: right;
+li.logInForm{
+	padding:10px;
+	color:white;
 }
 
-fieldset#logIn legend{
-	background-color: rgba(52, 152, 219,0.5);
-	margin: 1%;
+li.logInForm:hover{
+	background-color: none;
 }
-fieldset#logIn input, fieldset#logIn label
-{
-	margin: 1em;
-}
-
