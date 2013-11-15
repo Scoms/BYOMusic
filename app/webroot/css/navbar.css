@@ -33,18 +33,6 @@ ul.navbar li a,ul.navbar li div.input,ul.navbar li div.submit{
 	padding-top:10px;
 }
 
-ul.navbar li div.input:hover,ul.navbar li div.submit:hover{
-	background-color: none;
-}
-
-ul.navbar li:hover{
-   background-color: rgba(52, 152, 219,0.5);
-  -o-transition:.5s;
-  -ms-transition:.5s;
-  -moz-transition:.5s;
-  -webkit-transition:.5s;
-  transition:.5s;	
-}
 
 ul.navbar li.accountButtons{
 	float:right;

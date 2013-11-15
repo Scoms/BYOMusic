@@ -36,7 +36,15 @@ div.content{
 
 h1, h2{
 	font-weight: normal;
-	margin: 1em;
+	margin-bottom: 1em;
+}
+
+h2{
+	margin-left: 1em;
+}
+
+p{
+	margin-left: 2em;
 }
 
 a{
@@ -55,6 +63,7 @@ div.tableDisplay, fieldset{
 div.content div.titleDisplay{
 	margin-top: 2%;
 	margin-left: 2%;
+	padding: 2%;
 	float:left;
 	/*rgb(52, 152, 219)*/
 	display: inline;
@@ -64,12 +73,14 @@ div.content div.titleDisplay{
 div.content div.textDisplay{
 	margin-top: 2%;
 	margin-left: 2%;
+	padding:2em;
 	float:left;
 	/*rgb(52, 152, 219)*/
 	display: inline;
 	color:black;
-	width:60%;
-	background-color: white;
+	width:50%;
+	background-color: #ecf0f1;
+	border:solid black 1px;
 }
 
 div.rightDisplay{
@@ -77,6 +88,7 @@ div.rightDisplay{
 	width:32%;
 	float:right;
 	margin-right: 3em;
+	padding-top:2%;
 }
 
 div.textDisplay p{
@@ -87,6 +99,8 @@ div.textDisplay p{
 div.tableDisplay{
 	padding: 1em;
 	margin-bottom: 1em;
+	background-color: #2980b9;
+	border:solid black 1px;
 }
 
 div.tableDisplay table{

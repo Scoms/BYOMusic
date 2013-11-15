@@ -1,5 +1,9 @@
 <div class="titleDisplay">
 	<h1>Bring Your Own Music</h1>
+	<h2>Looking for something ?</h2>
+	<p>
+		<ipnut id="searchBox" type="text" style='width:200px;'/>
+	</p>
 </div>
 
 <div class="rightDisplay">
@@ -28,3 +32,5 @@
 		<h1>Live around you</h1>
 	</div>
 </div>
+
+<script type="text/javascript" src='js/homepage.js'></script>

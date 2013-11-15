@@ -9,6 +9,7 @@
 	<P>
 		<?php echo $this->Form->input('User.Country',array(
 		'label'=>'',
+        'style' => 'width:200px'
 		)); ?>
         <?php echo $this->Form->input('User.Country.id',array('value'=>$band['User']['Country']['id'],'type'=>'hidden')) ?>
 		<?php echo $this->Form->input('oldCountry',array('value'=>$band['User']['Country']['label_en'],'type'=>'hidden')) ?>

@@ -1,15 +1,36 @@
 $(document).ready(function(){
 
-	$('#logIn').hide();
-	//$('li').hover(alert('hover'));
-
+	$('#searchBox').select2({
+    minimumInputLength: 2,
+    placeholder: "search",
+    ajax: {
+        url: "/BYOMusic/WebServices/searchAll/"+$('#searchBox').val(),
+        dataType: 'json',
+        data: function(term, page) {
+            return {
+                pSearch: term,
+            };
+        },
+        results: function(data, page) {
+            return {
+                results: data.results
+            };
+        },
+        initSelection: function (element, callback) {
+                              var data = { id: "ok", text: "ok" };
+                            callback(data);
+                        }
+    },
+    formatResult: formatResult,
+    formatSelection: formatSelection,
+	});
 });
+function formatResult(node) {
+    return '<div>' + node.name + '</div>';
+};
 
-function logInMenu(){
-	if(!$('#logIn').is(':visible')){
-		$('#logIn').slideDown(500);
-	}
-	else{
-		$('#logIn').slideUp(500);
-	}
+function formatSelection(node) {
+	$('#UserCountryId').val(node.id);
+	$('#UserCountryLabelEn').val(node.name);
+    return node.name;
 };

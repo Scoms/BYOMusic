@@ -15,6 +15,7 @@
 	?>
 	<!-- CSS Files -->
 	<?php 
+		echo $this->Html->css("select2");
 		echo $this->Html->css("navbar");
 		echo $this->Html->css("global");
 		echo $this->Html->css("global.responsive");
@@ -22,7 +23,6 @@
 		echo $this->Html->css("message");
 		echo $this->Html->css("table");
 		echo $this->Html->css("bandDisplay");
-		echo $this->Html->css("select2");
 		echo $this->Html->css("dewplayer");
 		echo $this->Html->css("bubbles");
 	?>
