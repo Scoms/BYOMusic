@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 	$('#searchBox').select2({
-    minimumInputLength: 2,
+    minimumInputLength:1,
     placeholder: "search",
     ajax: {
         url: "/BYOMusic/WebServices/searchAll/"+$('#searchBox').val(),
@@ -24,13 +24,19 @@ $(document).ready(function(){
     formatResult: formatResult,
     formatSelection: formatSelection,
 	});
+
+    $('#searchBox').on("select2-selecting", function(e) { 
+        url = e['val'];
+        $(location).attr('href',url);
+    });
 });
 function formatResult(node) {
+   // alert(node.id);
     return '<div>' + node.name + '</div>';
 };
 
 function formatSelection(node) {
-	$('#UserCountryId').val(node.id);
-	$('#UserCountryLabelEn').val(node.name);
+	//$('#UserCountryId').val(node.id);
+	//$('#UserCountryLabelEn').val(node.name);
     return node.name;
 };

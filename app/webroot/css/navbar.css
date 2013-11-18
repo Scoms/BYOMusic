@@ -24,6 +24,7 @@ ul.navbar li{
 	vertical-align: middle;
 	/*Text*/
 	font-family:"Avantgarde",sans-serif;
+	font-size: 15px;
 }
 
 ul.navbar li a,ul.navbar li div.input,ul.navbar li div.submit{

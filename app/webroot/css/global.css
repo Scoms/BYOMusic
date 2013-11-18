@@ -8,6 +8,8 @@
 }
 
 body{
+	margin: 0;
+	top:0;
 	font-family: "Avantgarde", sans-serif;
 	background-image: url(../img/wallpaper.jpg);
 	background-repeat: no-repeat;
@@ -22,7 +24,6 @@ body{
     -o-background-size: cover;
     background-size: cover;
     
-    min-height: 700px;
 }
 
 div.content{
@@ -70,6 +71,12 @@ div.content div.titleDisplay{
 	background-color: rgba(52, 152, 219,0.5);
 }
 
+
+div.content div.textDisplay, div.content div.by2{
+	background-color: #ecf0f1;
+	border:solid black 1px;	
+}
+
 div.content div.textDisplay{
 	margin-top: 2%;
 	margin-left: 2%;
@@ -79,8 +86,6 @@ div.content div.textDisplay{
 	display: inline;
 	color:black;
 	width:50%;
-	background-color: #ecf0f1;
-	border:solid black 1px;
 }
 
 div.rightDisplay{
