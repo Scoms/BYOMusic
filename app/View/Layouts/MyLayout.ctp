@@ -49,7 +49,7 @@
 						AuthComponent::user('id'))); 
 					?>
 				<?php elseif (strtoupper(AuthComponent::user('role'))=='MANAGER'): ?>
-					<?php echo $this->Html->link(AuthComponent::user('username'),array('controller' => 'managers', 'action' => 'view')); ?>
+					<?php echo $this->Html->link(AuthComponent::user('username'),array('controller' => 'managers', 'action' => 'view',AuthComponent::user('id'))); ?>
 				<?php endif ?>
 			</li>
 			<li class="accountButtons">

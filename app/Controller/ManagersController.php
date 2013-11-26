@@ -12,7 +12,42 @@ class ManagersController extends AppController{
     }
     
 	public function view($id){
+        $editable = $id == AuthComponent::user('id') ? true : false;
+        $manager = $this->Manager->find('first',array('conditions'=>array('user_id'=>$id)));
+
+        $this->set('editable',$editable);
+        $this->set('manager',$manager);
+        $this->set('id',$id);
 	}
+
+    public function edit($id){
+        if(AuthComponent::user('id') != $id)
+        {
+            $this->redirect(array('controller'=>'Errors','action'=>'forbidden'));
+        }
+       
+       $manager = $this->Manager->find('first',array(
+            'conditions' => array(
+                'user_id'=> $id ),
+            'recursive' => 2
+            ));
+
+        if($this->request->is('post'))
+        {
+            $this->Manager->id = 1;
+            if($this->Manager->saveAll($this->request->data,array('deep'=>true)))
+            {
+                $this->Session->setFlash('Data saved.');
+                $this->redirect(array('action'=>'view',$id));
+            }
+            else
+            {
+                $this->Session->setFlash('Oops ! Try again.');
+            }
+        }
+
+        $this->data = $manager;
+    }
 }
 
 ?>
