@@ -20,11 +20,11 @@
 		echo $this->Html->css("global");
 		echo $this->Html->css("global.responsive");
 		echo $this->Html->css("forms");
-		echo $this->Html->css("message");
 		echo $this->Html->css("table");
 		echo $this->Html->css("bandDisplay");
 		echo $this->Html->css("dewplayer");
 		echo $this->Html->css("bubbles");
+		echo $this->Html->css("message");
 	?>
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 	<link href='http://fonts.googleapis.com/css?family=Raleway:400,200,300,500' rel='stylesheet' type='text/css'>
@@ -86,4 +86,11 @@
 		?>
 	</div>
 </body>
+<script type="text/javascript">
+	$(document).ready(function(){
+		if($('#flashMessage').text() != ''){
+			$('#flashMessage').delay(1500).slideUp(500);
+		}
+	});
+</script>
 </html>

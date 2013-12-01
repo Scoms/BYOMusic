@@ -20,11 +20,12 @@ class BandsController extends AppController
 	{
 		$editable = $id == AuthComponent::user('id') ? true : false;
 		$band = $this->Band->find('first',array(
-			'conditions' => array(
-				'user_id'=> $id ),
-			'recursive' => 2
-			));	
-
+			'recursive' => 2,
+			'condtions' => array(
+				'id' => $id
+				)
+			)
+		);
 		$songs = $this->Song->find('all',array(
 			'conditions' => array(
 				'band_id' => $id
@@ -51,7 +52,6 @@ class BandsController extends AppController
 			$this->Band->create();
 			if($this->Band->saveAll($this->request->data,array('deep'=>true)))
 			{
-				$this->Session->setFlash('Data saved.');
 				$this->redirect(array('action'=>'view',$id));
 			}
 			else
@@ -61,16 +61,19 @@ class BandsController extends AppController
 		}
 
 		$band = $this->Band->find('first',array(
-			'conditions' => array(
-				'user_id'=> $id ),
-			'recursive' => 2
-			));
+			'recursive' => 2,
+			'condtions' => array(
+				'id' => $id
+				)
+			)
+		);
 		$selected_styles = array();	
 		foreach ($band['Style'] as $style) {
 			array_push($selected_styles, $style['id']);
 		}
-		
+
 		$this->set('band',$band);
+		$this->set('id',$id);
 		$this->set('styles',$this->Band->Style->find('list',array('fields'=>array('id','label'))));
 		$this->set('styles_selected',$selected_styles);
 	}
@@ -93,6 +96,7 @@ class BandsController extends AppController
 		$songs = $this->Song->find('all',array('conditions'=>array('band_id'=>$id)));//,array('conditions'=>array('band_id'=>$id)));
 		$this->set('songs',$songs);
 		$this->set('albums',$albums);
+		$this->set('id',$id);
 		$this->set('albums_for',$albums_for);
 	}
 }

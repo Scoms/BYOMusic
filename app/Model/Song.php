@@ -5,8 +5,7 @@ class Song extends AppModel
 	public $id;
 	public $path;
 	public $title;
-	public $album_title;
-	public $band_id;
+	public $album_id;
 
 	public $validate = array(
 	'path' => array(
@@ -15,7 +14,7 @@ class Song extends AppModel
             'required' => true,
 	        'message' => 'Only audio files',
 	         )
-	)
+		)
 	);
 
 

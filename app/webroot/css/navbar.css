@@ -48,16 +48,23 @@ ul.navbar li:hover{
 div.submenu{
 	list-style: none;
 	position: fixed;
-	top: 40px;
-	height: 100%;
+	bottom: 0px;
+	height: 30px;
 	right: 0;
+	width: 100%;
 	padding:.5em;
 	padding-right: 0.2em;
+	background-color: white;
+	border-top: solid #8e44ad 2px;
 }
 
+div.submenu ul{
+	margin: 0 0 0 43%;
+}
 div.submenu ul li{
 	list-style: none;
-	margin-bottom:.5em;
+	display: inline;
+	margin: 0 15px 0 0;
 }
 
 li.logInForm:hover{

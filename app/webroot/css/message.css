@@ -1,11 +1,10 @@
 div.message{
 	/*Style*/
-	background-color:lightgrey;
-	background-repeat: no-repeat;
-
+	background-color:rgba(52, 152, 219,1.0);
 	/*Position*/
 	padding: 2em;
-	float:right;
-	position: absolute;
-	bottom: 0;
+	width: 30%;
+	margin-left: 35%;
 }
+
+

@@ -1,3 +1,5 @@
+<?php echo $this->element('submenu_band'); ?>
+
 <div class="textDisplay">
 
 	<h1>Edit</h1>
@@ -11,8 +13,8 @@
 		'label'=>'',
         'style' => 'width:200px'
 		)); ?>
-        <?php echo $this->Form->input('User.Country.id',array('value'=>$band['User']['Country']['id'],'type'=>'hidden')) ?>
-		<?php echo $this->Form->input('oldCountry',array('value'=>$band['User']['Country']['label_en'],'type'=>'hidden')) ?>
+        <?php echo $this->Form->input('User.Country.id',array('value'=> $band['User']['Country'] != null ? $band['User']['Country']['id'] : '','type'=>'hidden')) ?>
+		<?php echo $this->Form->input('oldCountry',array('value'=>$band['User']['Country'] != null ? $band['User']['Country']['label_en'] : 'Country','type'=>'hidden')) ?>
 	</p>
     <p><?php echo $this->Form->input('Style',array(
             'label' => __('Styles :',true),

@@ -11,13 +11,11 @@ class UsersController extends AppController{
 
     public function login() {
         if ($this->request->is('post')) {
-            if ($this->Auth->login()) {
-                //return $this->redirect($this->Auth->redirect());
-                return $this->redirect(array('controller'=>'Home'));
-            } else {
+            if (!$this->Auth->login()) {
                 $this->Session->setFlash(__('Bad credentials'));
             }
         }
+        return $this->redirect(array('controller'=>'Home'));
     }
 
     public function logout() {
@@ -42,13 +40,11 @@ class UsersController extends AppController{
         if($this->request->is('post'))
         {
             $this->User->create();
-
             $str_upper_role = strtoupper($this->request->data['User']['role']);
             $username = $this->request->data['User']['username'];
-
-
-            //if($this->Band->set('user_id', $this->User->find('first',array('conditions'=>array('username'=> $username)))))
+            //Check that the user name is free
             $userInBase = $this->User->find('first',array('conditions'=>array('username'=> $username)));
+            
             if($userInBase)
             {           
                 $this->Session->setFlash(__('Username is already used')); 
@@ -59,16 +55,16 @@ class UsersController extends AppController{
                 //If it's a band 
                 if($str_upper_role == 'BAND'){
                     $this->Band->create();
-                    $this->Band->set('user_id', $this->User->find('first',
+                    $this->Band->set('id', $this->User->find('first',
                         array('conditions'=>array('username'=> $username))
                     )['User']['id']);
-
+                    var_dump($this->request->data);
                     $this->Band->set('name',$username);
                     $this->Band->save();
                 }
                 else if($str_upper_role == 'MANAGER'){
                     $this->Manager->create();
-                    $this->Manager->set('user_id', $this->User->find('first',
+                    $this->Manager->set('id', $this->User->find('first',
                         array('conditions'=>array('username'=> $username))
                     )['User']['id']);
 

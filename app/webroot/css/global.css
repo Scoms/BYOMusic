@@ -55,29 +55,29 @@ div.tableDisplay, fieldset{
 
 }
 
-div.content div.titleDisplay{
+
+div.content div.titleDisplay, div.content fieldset{
 	margin-top: 2%;
 	margin-left: 2%;
 	padding: 2%;
 	float:left;
-	background-color: rgba(155, 89, 182,1.0);
 	color:white;
 	display: inline;
+	background-color: rgba(155, 89, 182,1.0);
 }
 
 
 div.content div.textDisplay, div.content div.by2{
 	border:solid black 1px;	
+	background-color: rgba(236, 240, 241,1.0);
 }
 
-div.content div.textDisplay{
+div.content div.textDisplay {
 	margin-top: 2%;
 	margin-left: 2%;
 	padding:2em;
 	float:left;
-	/*rgb(52, 152, 219)*/
 	display: inline;
-	color:black;
 	width:50%;
 }
 

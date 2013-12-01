@@ -2,7 +2,8 @@
 
 class CountriesController extends AppController
 {
-	var $uses = array('Band','Manager');
+	var $uses = array('Band','Manager','Country');
+
 	 public function beforeFilter() {
         parent::beforeFilter();
         $this->Auth->allow('webService');		

@@ -5,12 +5,12 @@ App::import('model', 'Style');
 
 class Band extends AppModel{ 
 	public $id;
-	
+
 	public $belongsTo = array(
 		'User' => array(
 			'classname' => 'User',
-			'conditons' => array('User.role == "band"'),
-			'dependent' => 'true'
+			'dependent' => 'true',
+			'foreignKey' => 'id'
 			)
 		);
 
@@ -23,7 +23,7 @@ class Band extends AppModel{
 			)
 		);
 
-	public $hasOne = array('Song','Album');
+	//public $hasOne = array('Song','Album');
 
 	public function beforeSave($options = array()) {
         foreach (array_keys($this->hasAndBelongsToMany) as $model)

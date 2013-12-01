@@ -1,3 +1,5 @@
+<?php echo $this->element('submenu_band'); ?>
+
 <div class="bubbles">
 	<div class="by2">
 		<h1>Add Songs</h1>
@@ -10,7 +12,7 @@
 			<?php
 				echo $this->Form->create('Album',array(
    						 'url' => array('controller' => 'albums', 'action' => 'add')));
-				echo $this->Form->input('title');
+				echo $this->Form->input('title',array('placeholder' => 'choose a title ...'));
 				echo $this->Form->input('band_id',array('value'=>AuthComponent::user('id'),'type'=>'hidden'));
 				echo $this->Form->end('Create');
 			?>

@@ -8,8 +8,10 @@ class User extends AppModel{
 	public $name = 'User';
     public $email;
     public $hasOne = array(
-        'Band' => array(),
-        'Manager' => array()
+        'Band' => array(
+            'className' => 'Band',
+            'foreignKey' => 'id'),
+        'Manager' => array()    
         );
     public $belongsTo = array('Country' => array(
             'classname' => 'Country'
