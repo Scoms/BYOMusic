@@ -1,22 +1,23 @@
 table{
     border-collapse:collapse;
-    border:solid black 1px;
+    /*border:solid black 1px;*/
     color:black;
 }
 
 table a{
-	color:black;
+	/*color:black;*/
 	display: block;
 }
 
 tr:hover{
-	color:black;
+	/*color:black;*/
 }
 tr{
 	background-color: white;
 }
 th{
-	background-color: #2980b9;
+	/*background-color: #2980b9;
+	*/
 }
 th, td {
 	font-weight: normal;

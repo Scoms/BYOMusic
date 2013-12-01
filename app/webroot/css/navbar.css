@@ -1,41 +1,36 @@
 ul.navbar{
-	/*Color*/
-	/*background-color:#e74c3c; 
-	*/
-	/*185*/
-	background-color: rgb(41, 100, 255);
-	/*Size*/
-	height: 40px;
+	background-color: #E9E9F0;
+	color:black;
+	height: 50px;
 	display: block;
 	width:100%;
-
-	/*Position*/
 	position:fixed;
 	top:0;
+	border-bottom: solid #8e44ad 2px;
 }
 
 ul.navbar li{	
-
 	/*Position*/
+	color:black;
 	display: inline-block;
 	position: relative;
 	padding: 0 5px 0 5px;
 	height: 100%;
 	vertical-align: middle;
 	/*Text*/
-	font-family:"Avantgarde",sans-serif;
-	font-size: 15px;
 }
 
 ul.navbar li a,ul.navbar li div.input,ul.navbar li div.submit{
 	text-align: center;
 	display: block;
-	height: 100%;
-	padding-top:10px;
+	margin:15px;
+	color:black;
+	font-style: none;
+	text-decoration: none;
 }
 
 
-ul.navbar li.accountButtons{
+ul.navbar li.accountButtons,ul.navbar li.floatRight{
 	float:right;
 	margin: 0px 5px 0px 0px;
 }
@@ -44,7 +39,6 @@ ul.navbar li.accountButtons{
 * Action Design
 */
 ul.navbar li:hover{
-	color:white;
 	cursor: pointer;
 }
 
@@ -59,11 +53,30 @@ div.submenu{
 	right: 0;
 	padding:.5em;
 	padding-right: 0.2em;
-	/* 166 */
-	background-color: rgba(149, 165, 166,0.2);
 }
 
 div.submenu ul li{
 	list-style: none;
 	margin-bottom:.5em;
+}
+
+li.logInForm:hover{
+	background-color: none;
+}
+
+ul li input{
+	width:8em;
+	border:none;
+}
+
+li.logInForm input[type='submit']{
+	width:auto;
+	padding: 0.2em;
+	width: 60px;
+	background-color: rgba(52, 73, 94,1.0);
+	color:white;
+}
+
+li.logInForm label{
+	margin-right: 10px;
 }

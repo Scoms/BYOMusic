@@ -32,9 +32,10 @@ class ManagersController extends AppController{
             'recursive' => 2
             ));
 
-        if($this->request->is('post'))
+        if($this->request->is('put'))
         {
-            $this->Manager->id = 1;
+            $this->Manager->set('user_id',$id);
+            var_dump($this->data);
             if($this->Manager->saveAll($this->request->data,array('deep'=>true)))
             {
                 $this->Session->setFlash('Data saved.');
@@ -45,7 +46,6 @@ class ManagersController extends AppController{
                 $this->Session->setFlash('Oops ! Try again.');
             }
         }
-
         $this->data = $manager;
     }
 }

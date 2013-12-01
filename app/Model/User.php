@@ -6,7 +6,11 @@ App::import('model', 'Country');
 
 class User extends AppModel{
 	public $name = 'User';
-    public $hasOne = array('Band','Manager');
+    public $email;
+    public $hasOne = array(
+        'Band' => array(),
+        'Manager' => array()
+        );
     public $belongsTo = array('Country' => array(
             'classname' => 'Country'
             )
@@ -31,7 +35,8 @@ class User extends AppModel{
                 'message' => 'Enter an existing role',
                 'allowEmpty' => false
             )
-        )
+        ),
+        'email' => 'email'
     );
 
     public function beforeSave($options = array()) {
