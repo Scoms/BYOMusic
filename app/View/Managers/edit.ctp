@@ -19,10 +19,7 @@
 		</table>
 		<br/>
 		<?php
-			echo $this->Form->Create('Hall');
-			echo $this->Form->input('name');
-			echo $this->Form->input('adress');
-			echo $this->Form->end('Create');
+			echo $this->Html->link('Create',array('action'=>'create','controller'=>'Halls',$id),array('class'=>'styled'));
 		?>
 	</div>
 </div>

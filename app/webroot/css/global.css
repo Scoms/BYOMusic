@@ -124,3 +124,8 @@ div.concrete{
 	background-color: rgba(236, 240, 241,1.0);
 	color:black;
 }
+
+
+div.gmapHeader{
+	margin:0;
+}
