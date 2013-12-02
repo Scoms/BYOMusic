@@ -1,11 +1,17 @@
 fieldset{
 	border:none;
 	width:300px;
+	margin-top: 2%;
+	margin-left: 2%;
+	padding: 2%;
+	float:left;
+	display: inline;
 }
 
 fieldset div.input{
 	margin:0 10px 10px 0; 
 }
+
 
 fieldset div.input input,fieldset div.input select{
 	float: right; 
@@ -13,18 +19,6 @@ fieldset div.input input,fieldset div.input select{
 	border:none;
 	background-color: white;
 }
-
-
-fieldset div.submit input[type='submit']{
-	width:auto;
-	border: none;
-	padding: 0.2em;
-	width: 60px;
-	background-color: rgba(52, 73, 94,1.0);
-	color:white;
-	font-weight: 300;
-}
-
 
 div.select2-container{
 	width:50px;
@@ -43,11 +37,12 @@ form div.input input{
 	border: none;
 }
 
-form div.submit input{
+input[type="submit"]{
 	border: none;
+	width: auto;
 	background-color: rgba(0,0,0,0);
-	color: #8e44ad;;
-	font-size: 20px;
+	color:#8e44ad;
+	font-size: 17px;
 }
 form div.submit input:hover{
 	cursor: pointer;

@@ -1,10 +1,17 @@
 <?php
 
-App::import('model', 'User');
+App::import('model', 'User','Hall');
 
 class Manager extends AppModel{ 
-	public $user_id;
+	public $id;
 	public $name;
+
+	public $hasOne = array(
+		'Hall' => array(
+			'className' => 'Hall',
+			'foreignKey' => 'manager_id' 
+			)
+		);
 }
 
 ?>

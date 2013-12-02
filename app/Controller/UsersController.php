@@ -67,14 +67,12 @@ class UsersController extends AppController{
                     $this->Manager->set('id', $this->User->find('first',
                         array('conditions'=>array('username'=> $username))
                     )['User']['id']);
-
                     $this->Manager->set('name', $this->User->find('first',
                         array('conditions'=>array('username'=> $username))
                     )['User']['username']);
-
                     $this->Manager->save();
                 }
-                $this->Session->setFlash(__('Your account has been successfuly created !')); 
+                $this->Session->setFlash(__('Your account has been created successfuly !')); 
                 return $this->redirect(array('controller'=> 'Home'));  
             }    
        }

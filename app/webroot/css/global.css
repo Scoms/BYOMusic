@@ -51,10 +51,6 @@ p{
 	margin-left: 2em;
 }
 
-div.tableDisplay, fieldset{
-
-}
-
 
 div.content div.titleDisplay, div.content fieldset{
 	margin-top: 2%;
@@ -122,4 +118,9 @@ div.textDisplay li
 {
 	list-style: none;
 	padding-left: 1em;
+}
+
+div.concrete{
+	background-color: rgba(236, 240, 241,1.0);
+	color:black;
 }
