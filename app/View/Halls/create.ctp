@@ -4,6 +4,8 @@
 	<h1>Create a new Hall</h1>
 </div>
 <div class="Gmap">
+	<input tpye="text" id="gmapSearchText"></input>
+	<button id="gmapSearch">Search</button>
 	<?php
 		echo $this->googlemap->map();
 	?>

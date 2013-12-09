@@ -16,7 +16,6 @@
 	<!-- CSS Files -->
 	<?php 
 		echo $this->Html->css("select2");
-		echo $this->Html->css("navbar");
 		echo $this->Html->css("global");
 		echo $this->Html->css("global.responsive");
 		echo $this->Html->css("forms");
@@ -26,6 +25,7 @@
 		echo $this->Html->css("bubbles");
 		echo $this->Html->css("message");
 		echo $this->Html->css("Gmap");
+		echo $this->Html->css("navbar");
 	?>
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 	<link href='http://fonts.googleapis.com/css?family=Raleway:400,200,300,500' rel='stylesheet' type='text/css'>

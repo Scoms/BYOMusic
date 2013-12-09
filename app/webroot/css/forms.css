@@ -34,7 +34,6 @@ form div.checkbox{
 
 form div.input input{
 	float:right;
-	border: none;
 }
 
 input[type="submit"], a.styled{
@@ -47,4 +46,8 @@ input[type="submit"], a.styled{
 }
 form div.submit input:hover{
 	cursor: pointer;
+}
+
+fieldset input[type="submit"]{
+	color:white;
 }

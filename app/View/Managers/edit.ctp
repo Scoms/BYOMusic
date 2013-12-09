@@ -18,8 +18,5 @@
 			</th>
 		</table>
 		<br/>
-		<?php
-			echo $this->Html->link('Create',array('action'=>'create','controller'=>'Halls',$id),array('class'=>'styled'));
-		?>
 	</div>
 </div>

@@ -9,5 +9,14 @@
 				);
 			?>
 		</li>
+		<li>
+			<?php  
+				echo $this->Html->link(
+				    $this->Html->image("edit.png", array("alt" => "Edit")),
+				    array('controller'=>'Halls',"action"=>"create",$id),
+				    array('escape' => false)
+				);
+			?>
+		</li>
 	</ul>
 </div>

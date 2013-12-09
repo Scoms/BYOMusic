@@ -13,7 +13,7 @@ class ManagersController extends AppController{
     
 	public function view($id){
         $editable = $id == AuthComponent::user('id') ? true : false;
-        $manager = $this->Manager->find('first',array('conditions'=>array('id'=>$id)));
+        $manager = $this->Manager->find('first',array('conditions'=>array('Manager.id'=>$id)));
 
         $this->set('editable',$editable);
         $this->set('manager',$manager);
