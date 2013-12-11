@@ -3,9 +3,7 @@
 class Hall extends AppModel{
 	public $id;
 	public $name;
-	public $adress;
-	public $lgt;
-	public $lat;
+	public $address;
 	public $manager_id;
 }
 

@@ -2,6 +2,9 @@
 
 class ManagersController extends AppController{
 	
+    var $uses = array('Manager','Hall');
+    public $helpers = array('GoogleMap');
+
     public function beforeFilter() {
         parent::beforeFilter();
         $this->Auth->allow('index','view');		
@@ -14,7 +17,9 @@ class ManagersController extends AppController{
 	public function view($id){
         $editable = $id == AuthComponent::user('id') ? true : false;
         $manager = $this->Manager->find('first',array('conditions'=>array('Manager.id'=>$id)));
+        $halls = $this->Hall->find('all',array("conditions" => array('manager_id' => $id)));
 
+        $this->set('halls',$halls);
         $this->set('editable',$editable);
         $this->set('manager',$manager);
         $this->set('id',$id);
