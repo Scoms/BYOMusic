@@ -5,9 +5,11 @@
 ?>
 <style type="text/css">
 	div#map_canvas{
-		margin-top: 50px;
 		height: 200px;
 		width: 400px;
+	}
+	h2{
+		margin-top:50px;
 	}
 </style>
 
@@ -27,11 +29,14 @@
 			<?php foreach ($halls as $hall) : ?>
 				<tr>
 					<td><?php echo $hall['Hall']['name'] ?></td>
-					<td><?php echo $hall['Hall']['address'] ?></td>
+					<td class="hallAddress" id=<?php echo $hall['Hall']['name']?>
+						>
+						<?php echo $hall['Hall']['address'] ?></td>
 				</tr>
 			<?php endforeach ?>
 		</table>
-		<div>
+		<div id="gmapContainer">
+			<h2></h2>
 			<?php
 				echo $this->googlemap->map();
 				echo $this->Html->script('gmap_facto');
