@@ -15,6 +15,7 @@
 			<?php endforeach ?>
 		</ul>
 	</p>
+	<p>Contact : <?php echo $band['Band'] ?></p>
 </div>
 <div class='rightDisplay'>
 	<div class="tableDisplay">

@@ -8,15 +8,3 @@
 		<p><?php echo $this->Form->input('name',array('label'=>'Name : ')) ?></p>
 	<?php echo $this->Form->end('Update') ?>
 </div>
-<div class="rightDisplay">
-	<div class="tableDisplay concrete">
-		<h1>Halls</h1>
-		<table>
-			<th>
-				<td>Name</td>
-				<td>location</td>
-			</th>
-		</table>
-		<br/>
-	</div>
-</div>
