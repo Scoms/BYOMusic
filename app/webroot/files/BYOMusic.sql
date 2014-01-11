@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Lun 18 Novembre 2013 à 11:33
+-- Généré le: Sam 11 Janvier 2014 à 10:48
 -- Version du serveur: 5.5.27
 -- Version de PHP: 5.4.7
 
@@ -31,16 +31,15 @@ CREATE TABLE IF NOT EXISTS `albums` (
   `title` varchar(100) NOT NULL,
   `band_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
 -- Contenu de la table `albums`
 --
 
 INSERT INTO `albums` (`id`, `title`, `band_id`) VALUES
-(1, 'First EP', 39),
-(3, 'second album', 39),
-(4, 'zizi', 39);
+(5, 'First EP', 46),
+(6, 'Second EP', 46);
 
 -- --------------------------------------------------------
 
@@ -49,22 +48,18 @@ INSERT INTO `albums` (`id`, `title`, `band_id`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `bands` (
-  `user_id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
-  `id` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `bands`
 --
 
-INSERT INTO `bands` (`user_id`, `name`, `id`) VALUES
-(37, 'a', 1),
-(38, 'b', 2),
-(39, 'G''n''R', 3),
-(41, 'Band', 4);
+INSERT INTO `bands` (`id`, `name`) VALUES
+(46, 'Geek''N Riffs');
 
 -- --------------------------------------------------------
 
@@ -83,7 +78,9 @@ CREATE TABLE IF NOT EXISTS `bands_styles` (
 
 INSERT INTO `bands_styles` (`band_id`, `style_id`) VALUES
 (3, 1),
-(3, 3);
+(3, 3),
+(46, 2),
+(46, 3);
 
 -- --------------------------------------------------------
 
@@ -355,20 +352,45 @@ INSERT INTO `countries` (`id`, `code`, `alpha2`, `alpha3`, `label_en`, `label_fr
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `halls`
+--
+
+CREATE TABLE IF NOT EXISTS `halls` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `manager_id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `address` varchar(200) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+
+--
+-- Contenu de la table `halls`
+--
+
+INSERT INTO `halls` (`id`, `manager_id`, `name`, `address`) VALUES
+(4, 48, 'Laiterie', 'Laiterie Strasbourg'),
+(5, 48, 'Zenith Strasbourg', 'zenith de strasbourg');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `managers`
 --
 
 CREATE TABLE IF NOT EXISTS `managers` (
-  `user_id` int(11) NOT NULL,
-  `name` varchar(100) NOT NULL
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `user_id` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `managers`
 --
 
-INSERT INTO `managers` (`user_id`, `name`) VALUES
-(42, 'Laiterie');
+INSERT INTO `managers` (`id`, `name`) VALUES
+(48, 'Laiterie');
 
 -- --------------------------------------------------------
 
@@ -384,14 +406,14 @@ CREATE TABLE IF NOT EXISTS `songs` (
   `title` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 --
 -- Contenu de la table `songs`
 --
 
 INSERT INTO `songs` (`id`, `path`, `band_id`, `album_id`, `title`) VALUES
-(6, '01 Whole Lotta Love.mp3', 39, 4, 'Whole lotta');
+(7, 'Factominer.mp3', 46, 5, 'Factominer.mp3');
 
 -- --------------------------------------------------------
 
@@ -430,19 +452,17 @@ CREATE TABLE IF NOT EXISTS `users` (
   `created` date DEFAULT NULL,
   `modified` datetime DEFAULT NULL,
   `country_id` int(11) NOT NULL,
+  `email` varchar(150) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=43 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=49 ;
 
 --
 -- Contenu de la table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `password`, `role`, `created`, `modified`, `country_id`) VALUES
-(37, 'a', '01799bf9183aca277a1734156fa54aae914e8d55', 'band', '2013-10-13', '2013-10-13 13:10:36', 0),
-(38, 'b', '0204d5169739b16df17b3afae2ae26411338b2ce', 'band', '2013-10-13', '2013-10-13 13:18:28', 0),
-(39, 'G''nR', 'c92bfaea792afabefa7d24a7f162b3100828d2b8', 'band', '2013-12-18', '2013-11-07 14:20:28', 75),
-(41, 'Band', '01799bf9183aca277a1734156fa54aae914e8d55', 'band', '2013-10-20', '2013-10-20 12:13:56', 0),
-(42, 'Laiterie', 'c92bfaea792afabefa7d24a7f162b3100828d2b8', 'manager', '2013-11-18', '2013-11-18 11:02:56', 0);
+INSERT INTO `users` (`id`, `username`, `password`, `role`, `created`, `modified`, `country_id`, `email`) VALUES
+(46, 'Geek''N Riffs', 'c92bfaea792afabefa7d24a7f162b3100828d2b8', 'band', '2012-10-23', '2013-12-02 10:00:08', 75, 'wieser.laurent@gmail.com'),
+(48, 'Laiterie', 'c92bfaea792afabefa7d24a7f162b3100828d2b8', 'manager', '2013-12-02', '2013-12-02 11:38:12', 0, 'wieser.laurent@gmail.com');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
