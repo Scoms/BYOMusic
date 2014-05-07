@@ -1,10 +1,9 @@
 
 $(document).ready(function(){
-
 	//$("#gmapSearch").click(createGMapFromAddress($("#gmapSearchText").text(),'map_canvas'));
 	$("#gmapSearch").click(function(e){
 		e.preventDefault();
-		createGMapFromAddress($("#HallAddress").val(),"map_canvas");
+		createGMapFromAddress($("#address").val(),"map_canvas");
 		});
 });
 /*

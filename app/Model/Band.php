@@ -20,6 +20,9 @@ class Band extends AppModel{
 			'classname' => 'Style',
 			'foreignKey' => 'band_id',
 			'associatedKey' => 'style_id'
+			),
+		"Events" =>array(
+			"joinTable" => "bands_events"
 			)
 		);
 

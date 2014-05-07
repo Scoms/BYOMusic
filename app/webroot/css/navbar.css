@@ -3,12 +3,12 @@ ul.navbar{
 	background-color:#9b59b6;*/
 	background-color: white;
 	color:black;
-	height: 50px;
-	display: block;
+	height: 40px;
 	width:100%;
+	display:;
 	position:fixed;
 	top:0;
-	border-bottom: solid #8e44ad 2px;
+	/*border-bottom: solid #8e44ad 2px;*/
 }
 
 ul.navbar li{	
@@ -24,7 +24,7 @@ ul.navbar li{
 ul.navbar li a,ul.navbar li div.input,ul.navbar li div.submit{
 	text-align: center;
 	display: block;
-	margin:15px;
+	margin:10px;
 	color:black;
 	font-style: none;
 	text-decoration: none;
@@ -51,16 +51,15 @@ div.submenu{
 	position: fixed;
 	bottom: 0px;
 	height: 30px;
-	right: 0;
-	width: 100%;
+	width: auto;
+	margin: auto;
 	padding:.5em;
 	padding-right: 0.2em;
 	background-color: white;
-	border-top: solid #8e44ad 2px;
 }
 
 div.submenu ul{
-	margin: 0 0 0 43%;
+	display: inline;
 }
 div.submenu ul li{
 	list-style: none;

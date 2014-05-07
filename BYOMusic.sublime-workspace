@@ -4,6 +4,106 @@
 		"selected_items":
 		[
 			[
+				"ta",
+				"tableDisplay"
+			],
+			[
+				"va",
+				"var_dump"
+			],
+			[
+				"en",
+				"endforeach"
+			],
+			[
+				"id",
+				"idEvent"
+			],
+			[
+				"event",
+				"event_id"
+			],
+			[
+				"qu",
+				"query"
+			],
+			[
+				"confirm",
+				"confirmBand"
+			],
+			[
+				"select",
+				"selectResponse"
+			],
+			[
+				"is_n",
+				"is_null"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"bord",
+				"border-top"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"in",
+				"inline"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"eve",
+				"event_id"
+			],
+			[
+				"ev",
+				"event_id"
+			],
+			[
+				"array_p",
+				"array_pop"
+			],
+			[
+				"has",
+				"hasAndBelongsToMany"
+			],
+			[
+				"arra",
+				"array_pop"
+			],
+			[
+				"Auth",
+				"AuthComponent"
+			],
+			[
+				"Au",
+				"AuthComponent"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"manager",
+				"manager_id"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
 				"TH",
 				"TH_RST"
 			],
@@ -155,6 +255,79 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "app/View/Bands/view.ctp",
+			"settings":
+			{
+				"buffer_size": 1998,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/View/Events/index.ctp",
+			"settings":
+			{
+				"buffer_size": 662,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Controller/BandsController.php",
+			"settings":
+			{
+				"buffer_size": 2539,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/webroot/css/table.css",
+			"settings":
+			{
+				"buffer_size": 533,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Controller/EventsController.php",
+			"settings":
+			{
+				"buffer_size": 2853,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/View/Events/edit.ctp",
+			"settings":
+			{
+				"buffer_size": 1337,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/webroot/css/global.css",
+			"settings":
+			{
+				"buffer_size": 1851,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/View/Home/index.ctp",
+			"settings":
+			{
+				"buffer_size": 1168,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/laurentwieser/Documents/Sites web/SXBnow/ws_transports.php",
+			"settings":
+			{
+				"buffer_size": 30,
+				"line_ending": "Unix",
+				"name": "<?php"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -180,6 +353,46 @@
 	},
 	"file_history":
 	[
+		"/Users/laurentwieser/Documents/Sites web/BYOMusic/app/View/Events/confirm_band.ctp",
+		"/Users/laurentwieser/Documents/Sites web/BYOMusic/app/Controller/EventsController.php",
+		"/Users/laurentwieser/Documents/Sites web/BYOMusic/app/View/Events/index.ctp",
+		"/Users/laurentwieser/Documents/Sites web/BYOMusic/app/View/Events/edit.ctp",
+		"/Users/laurentwieser/Documents/Sites web/BYOMusic/app/View/Managers/view.ctp",
+		"/Users/laurentwieser/Documents/Sites web/BYOMusic/app/webroot/css/navbar.css",
+		"/Users/laurentwieser/Documents/Sites web/BYOMusic/app/webroot/css/global.css",
+		"/Users/laurentwieser/Documents/Sites web/BYOMusic/app/Controller/HallsController.php",
+		"/Users/laurentwieser/Documents/Sites web/BYOMusic/app/Controller/ManagersController.php",
+		"/Users/laurentwieser/Documents/Sites web/BYOMusic/app/View/Bands/view.ctp",
+		"/Users/laurentwieser/Documents/Sites web/BYOMusic/app/View/Home/index.ctp",
+		"/Users/laurentwieser/Documents/Sites web/BYOMusic/app/webroot/css/table.css",
+		"/Users/laurentwieser/Documents/Sites web/BYOMusic/app/Model/Event.php",
+		"/Users/laurentwieser/Documents/Sites web/BYOMusic/app/Model/Band.php",
+		"/Users/laurentwieser/Documents/Sites web/BYOMusic/app/View/Halls/create_date.ctp",
+		"/Users/laurentwieser/Documents/Sites web/BYOMusic/app/webroot/js/GmapScript.js",
+		"/Users/laurentwieser/Documents/Sites web/BYOMusic/app/webroot/js/gmap_facto.js",
+		"/Users/laurentwieser/Documents/Sites web/BYOMusic/app/View/Halls/create.ctp",
+		"/Users/laurentwieser/Documents/Sites web/BYOMusic/app/Controller/BandsController.php",
+		"/Users/laurentwieser/Documents/Sites web/BYOMusic/app/View/Events/apply.ctp",
+		"/Users/laurentwieser/Documents/Sites web/BYOMusic/app/View/Layouts/MyLayout.ctp",
+		"/Users/laurentwieser/Documents/Sites web/BYOMusic/app/View/Pages/home.ctp",
+		"/Users/laurentwieser/Documents/Sites web/BYOMusic/app/Model/Hall.php",
+		"/Users/laurentwieser/Documents/Sites web/BYOMusic/app/Controller/HomeController.php",
+		"/Users/laurentwieser/Documents/Sites web/BYOMusic/app/Model/Manager.php",
+		"/Users/laurentwieser/Documents/Sites web/BYOMusic/app/View/Bands/edit.ctp",
+		"/Users/laurentwieser/Documents/Sites web/BYOMusic/app/Config/core.php",
+		"/Users/laurentwieser/Documents/Sites web/BYOMusic/lib/Cake/Cache/Cache.php",
+		"/Users/laurentwieser/Documents/Sites web/BYOMusic/app/View/Elements/submenu_manager.ctp",
+		"/Users/laurentwieser/Documents/Sites web/BYOMusic/app/View/Bands/songs_management.ctp",
+		"/Users/laurentwieser/Documents/Sites web/BYOMusic/app/webroot/css/Gmap.css",
+		"/Users/laurentwieser/Documents/Sites web/BYOMusic/app/Controller/WebServicesController.php",
+		"/Users/laurentwieser/Documents/Sites web/BYOMusic/app/View/Managers/edit.ctp",
+		"/Users/laurentwieser/Documents/Sites web/BYOMusic/app/webroot/css/gmap_halls.css",
+		"/Users/laurentwieser/Documents/Sites web/BYOMusic/app/webroot/js/gmapscript_halls.js",
+		"/Users/laurentwieser/Documents/Sites web/BYOMusic/.htaccess",
+		"/Users/laurentwieser/Documents/Sites web/BYOMusic/app/Controller/SongsController.php",
+		"/Users/laurentwieser/Documents/Sites web/BYOMusic/app/View/WebServices/search_all.ctp",
+		"/Users/laurentwieser/Documents/Sites web/BYOMusic/app/Config/database.php",
+		"/Users/laurentwieser/Documents/Sites web/BYOMusic/app/View/Songs/edit.ctp"
 	],
 	"find":
 	{
@@ -198,6 +411,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"layout",
+			";\n",
+			"lat",
+			"style",
+			"debug",
+			"cache",
+			"disable",
+			"table",
 			"readTCP",
 			"protocole",
 			"readAp",
@@ -232,8 +453,253 @@
 	"groups":
 	[
 		{
+			"selected": 8,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/View/Bands/view.ctp",
+					"settings":
+					{
+						"buffer_size": 1998,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								636,
+								636
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 65.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/View/Events/index.ctp",
+					"settings":
+					{
+						"buffer_size": 662,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								661,
+								661
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/Controller/BandsController.php",
+					"settings":
+					{
+						"buffer_size": 2539,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								808,
+								808
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 373.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/webroot/css/table.css",
+					"settings":
+					{
+						"buffer_size": 533,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								382,
+								382
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/Controller/EventsController.php",
+					"settings":
+					{
+						"buffer_size": 2853,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1980,
+								1980
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 461.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/View/Events/edit.ctp",
+					"settings":
+					{
+						"buffer_size": 1337,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								830,
+								830
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/webroot/css/global.css",
+					"settings":
+					{
+						"buffer_size": 1851,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1594,
+								1594
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1205.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/View/Home/index.ctp",
+					"settings":
+					{
+						"buffer_size": 1168,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								731,
+								731
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/Users/laurentwieser/Documents/Sites web/SXBnow/ws_transports.php",
+					"settings":
+					{
+						"buffer_size": 30,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								30,
+								30
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<?php",
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -243,7 +709,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 31.0
 	},
 	"layout":
 	{
@@ -278,6 +744,126 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"index",
+				"app/View/Home/index.ctp"
+			],
+			[
+				"bands/vi",
+				"app/View/Bands/view.ctp"
+			],
+			[
+				"events/",
+				"app/View/Events/edit.ctp"
+			],
+			[
+				"events",
+				"app/Controller/EventsController.php"
+			],
+			[
+				"bands",
+				"app/Controller/BandsController.php"
+			],
+			[
+				"bands/v",
+				"app/View/Bands/view.ctp"
+			],
+			[
+				"events/edi",
+				"app/View/Events/edit.ctp"
+			],
+			[
+				"manager/vi",
+				"app/View/Managers/view.ctp"
+			],
+			[
+				"home/",
+				"app/View/Home/index.ctp"
+			],
+			[
+				"manager/",
+				"app/View/Managers/view.ctp"
+			],
+			[
+				"mana",
+				"app/Controller/ManagersController.php"
+			],
+			[
+				"halls",
+				"app/Controller/HallsController.php"
+			],
+			[
+				"hall",
+				"app/Controller/HallsController.php"
+			],
+			[
+				"band",
+				"app/Controller/BandsController.php"
+			],
+			[
+				"eve",
+				"app/Model/Event.php"
+			],
+			[
+				"home",
+				"app/View/Pages/home.ctp"
+			],
+			[
+				"edit",
+				"app/View/Bands/edit.ctp"
+			],
+			[
+				"core",
+				"app/Config/core.php"
+			],
+			[
+				"cache",
+				"lib/Cake/Cache/Cache.php"
+			],
+			[
+				"manager",
+				"app/Controller/ManagersController.php"
+			],
+			[
+				"submen",
+				"app/View/Elements/submenu_manager.ctp"
+			],
+			[
+				"gmap",
+				"app/webroot/js/GmapScript.js"
+			],
+			[
+				"create",
+				"app/View/Halls/create.ctp"
+			],
+			[
+				"view",
+				"app/View/Managers/view.ctp"
+			],
+			[
+				"htac",
+				".htaccess"
+			],
+			[
+				"songc",
+				"app/Controller/SongsController.php"
+			],
+			[
+				"edit.ctp",
+				"app/View/Managers/edit.ctp"
+			],
+			[
+				"sear",
+				"app/View/WebServices/search_all.ctp"
+			],
+			[
+				"web",
+				"app/Controller/WebServicesController.php"
+			],
+			[
+				"database",
+				"app/Config/database.php.default"
+			]
 		],
 		"width": 0.0
 	},
@@ -293,6 +879,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 150.0,
+	"side_bar_width": 235.0,
 	"status_bar_visible": true
 }

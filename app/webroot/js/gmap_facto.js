@@ -1,3 +1,4 @@
+
 function createGMapFromAddress(address, gmap_id, map_options){
     map_options = (map_options) ? map_options : {
         zoom: 14,

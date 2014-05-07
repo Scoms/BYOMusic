@@ -2,8 +2,15 @@ table{
     border-collapse:collapse;
     /*border:solid black 1px;*/
     color:black;
-}
+	background-color: #ecf0f1;
+	top:0;
+	margin-top:0px;
+	background-color: red;
 
+}
+table.full{
+	width:90%;
+}
 table a{
 	/*color:black;*/
 	display: block;
@@ -13,7 +20,13 @@ tr:hover{
 	/*color:black;*/
 }
 tr{
+	border-top: solid lightgrey 1px;
 	background-color: white;
+
+}
+tr.header{
+	border-top: none;
+	color:#2980b9;
 }
 th{
 	/*background-color: #2980b9;

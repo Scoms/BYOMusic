@@ -18,5 +18,14 @@
 				);
 			?>
 		</li>
+			<?php  
+				echo $this->Html->link(
+				    $this->Html->image("date.png", array("alt" => "Déposer une annonce")),
+				    array('controller'=>'Halls',"action"=>"createDate"),
+				    array('escape' => false)
+				);
+			?>
+		<li>
+		</li>
 	</ul>
 </div>

@@ -7,10 +7,10 @@
 </div>
 
 <div class="rightDisplay">
-	<div class="tableDisplay" id="home_bands">
+	<div class="tableDisplay left equals" id="home_bands">
 		<h1>Last bands registred</h1>
 		<table>
-			<tr>
+			<tr class="header">
 				<th>Name</th>
 				<th>Created</th>
 			</tr>
@@ -28,8 +28,24 @@
 			<?php endforeach ?>
 		</table>
 	</div>
-	<div class="tableDisplay" id="home_live">
-		<h1>Live around you</h1>
+	<div class="tableDisplay right equals" id="home_live">
+		<h1>Last Events noticed</h1>
+		<table>
+			<tr class="header">
+				<th>Place</th>
+				<th>Description</th>
+			</tr>
+			<?php foreach ($events as $event): ?>
+			<tr >
+				<td>
+					<?php echo $event["Hall"]["name"]; ?>
+				</td>
+				<td>
+					<?php echo $event["Event"]["description"]; ?>
+				</td>
+			</tr>
+			<?php endforeach ?>
+		</table>
 	</div>
 </div>
 

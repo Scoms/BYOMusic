@@ -42,6 +42,7 @@ class SongsController extends AppController{
                 $this->Session->setFlash("oops");
             }
         }
+        $this->redirect(array('controller'=>'Home'));
         $this->redirect(array('controller'=>'bands','action'=>'songsManagement',$user_id));
     }
 }

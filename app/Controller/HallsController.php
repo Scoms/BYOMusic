@@ -2,7 +2,8 @@
 
 class HallsController extends AppController{
 	
-	public $helpers = array('GoogleMap');
+    public $helpers = array('GoogleMap');
+	var $uses = array('Event','Hall');
     
     public function beforeFilter() {
         parent::beforeFilter();
@@ -24,8 +25,35 @@ class HallsController extends AppController{
                 $this->redirect(array('controller'=>'managers','action'=>'view',AuthComponent::user('id')));
             }
         }
+        $this->redirect(array('controller'=>'managers','action'=>'view',AuthComponent::user('id')));
 
 	}	
+
+    public function createDate(){
+        $halls = $this->Hall->find("list",array(
+            "fields" => array("id","name"),
+            "conditions" => array('manager_id' => AuthComponent::user('id'))
+            )
+        ); 
+        
+        $this->set("halls",$halls);   
+
+        if($this->request->is('post')){
+            var_dump($this->request->data);
+            if($this->Event->save($this->request->data)){
+                $this->Session->setFlash("Done");
+            }
+            else{
+                $this->Session->setFlash("Opps");
+            }
+
+        }    
+    }
+
+    public function remove($id){
+        $this->Hall->delete($id);
+        $this->redirect(array('controller' => 'managers', 'action'=>'view',AuthComponent::user('id')));
+    }
 }
 
 ?>

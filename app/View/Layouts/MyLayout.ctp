@@ -54,6 +54,16 @@
 					<?php echo $this->Html->link(AuthComponent::user('username'),array('controller' => 'managers', 'action' => 'view',AuthComponent::user('id'))); ?>
 				<?php endif ?>
 			</li>
+			<li>
+				<?php echo $this->Html->link(
+					"Events",
+					array(
+						"controller"=>"events",
+						"action" => "index"
+						)
+					);
+				 ?>
+			</li>
 			<li class="accountButtons">
 				<?php echo $this->Html->link('Log Out',array('controller' => 'users', 'action' => 'logout')); ?>
 	        </li>

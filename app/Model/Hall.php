@@ -5,6 +5,8 @@ class Hall extends AppModel{
 	public $name;
 	public $address;
 	public $manager_id;
+
+	public $hasMany = "Event";
 }
 
 ?>
